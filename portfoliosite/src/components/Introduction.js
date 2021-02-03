@@ -2,7 +2,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-solid-svg-icons'
 import { Fade } from "react-reveal";
-import emoji from "react-easy-emoji";
 
 
 function Introduction() {
