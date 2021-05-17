@@ -1,94 +1,107 @@
 
-    /*Header menu styles*/
-    .header {
-        max-width: 100%;
-        padding: 15px;
-        margin: 0px auto;
-    }
+.header {
+    max-width: 100%;
+    padding: 15px;
+    margin: 0px auto;
+}
 
-    .header ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-    }
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
 
-    .header li a {
-        display: block;
-        padding: 20px;
-        color: #fff;
-        text-decoration: none;
+.header li a {
+    display: block;
+    padding: 20px;
+    color: #fff;
+    text-decoration: none;
         
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #2d2e2d;
+    border-radius: 8px;
+}
+
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
     }
 
-    .header li a:hover,
-    .header .menu-btn:hover {
-        background-color: #2d2e2d;
-        border-radius: 8px;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
-
-    @media (min-width: 48em) {
-        .header li {
-            float: left;
-        }
-
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .header .menu {
-            max-height: none;
-        }
-
-        .header .menu-icon {
-            display: none;
-        }
+    .header .menu {
+        max-height: none;
     }
 
-    @media (max-width: 960px) and (min-width: 768px) {
-        .header {
-            font-size: 12px;
-        }
+    .header .menu-icon {
+        display: none;
     }
+}
 
-    .spin {
-        animation-name: spin-animation; /* Refers to the name of your @keyframes element below */
-        animation-duration: 4s; /* Change to speed up or slow down */
-        animation-iteration-count: infinite; /* Never stop waving :) */
-        transform-origin: center; /* Pivot around the bottom-left palm */
-        display: inline-block;
+@media (max-width: 960px) and (min-width: 768px) {
+    .header {
+        font-size: 12px;
     }
+}
 
-    @keyframes spin-animation {
-        0% {
-            transform: rotate(360.0deg)
-        }
+.spin {
+    animation-name: spin-animation; /* Refers to the name of your @keyframes element below */
+    animation-duration: 4s; /* Change to speed up or slow down */
+    animation-iteration-count: infinite; /* Never stop waving :) */
+    transform-origin: center; /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes spin-animation {
+    0% {
+        transform: rotate(360.0deg)
     }
+}
 
 
-    .head {
-        margin-left: 40px;
-        width: 90vh;
-    }
+.head {
+    margin-left: 40px;
+    margin-right: 40px;
+}
 
-    .intro {
-        font-size: xx-large;
-    }
+.intro {
+    font-size: xx-large;
+}
 
-    .hello {
-        font-size: 80px;
-    }
+.hello {
+    font-size: 80px;
+}
 
-    .socialbut {
-        width: 10vh;
-        height: 4vh;
-        cursor: pointer;
-        border-radius: 6px;
-        border:none;
-        margin-right: 1vh;
-    }
+.socialbut {
+    width: 12vh;
+    height: 4vh;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 3px solid grey;
+    margin-right: 1vh;
+    padding-bottom: 5px;
+}
+
+.grad {
+    background-image: linear-gradient(to right, rgb(64,93,230),rgb(88,81,219),rgb(131,58,180),rgb(193,53,132),rgb(225,48,108),rgb(253,29,29),rgb(245,96,64),rgb(247,119,55),rgb(252,175,69),rgb(255,220,128));
+}
+
+.theraplan {
+    border: 2px solid #35baf2 !important;
+    border-radius: 5px;
+    background-color: #35baf2 !important;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+}
+
 
 

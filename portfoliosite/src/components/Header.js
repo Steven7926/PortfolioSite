@@ -8,7 +8,7 @@ function Header() {
             <header className="header">
                 <ul className = "menu">
                     <li>
-                        <a href="https://google.com">
+                        <a href="#workexperience">
                             <span>Work Experience </span>
                             <FontAwesomeIcon icon={faBriefcase} />
                         </a>                   

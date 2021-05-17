@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header";
 import Introduction from "./Introduction";
+import WorkExperience from "./WorkExperience";
 import  "../css/Portfolio.css";
 export default class Main extends Component {
     render() {
@@ -8,6 +9,7 @@ export default class Main extends Component {
             <div>
                 <Header />
                 <Introduction />
+                <WorkExperience />
             </div>
         );
     }
