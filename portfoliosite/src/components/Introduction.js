@@ -15,14 +15,14 @@ function Introduction() {
                 <p className="intro">
                     I'm a computer engineer with a passion for hardware and software development 🤖.
                     I'm experienced in building web and mobile applications using JavaScript, Reactjs, Nodejs,
-                    Java, C#, SQL, MongoDB, HTML, and CSS. I also have experience in small scale embedded systems! 🖥️
+                    Java, C#, SQL, MongoDB, HTML, and CSS. I also have experience in small scale embedded systems and PCB design! 🖥️
                 </p>
                 <div>
                     <button className="socialbut">
                         <a href="https://github.com/Steven7926" target="_blank">Github</a>                       
                     </button>
                     <button className="socialbut">
-                        <a href="https://linkedin.com/in/steven-husdon-42a79714b" target="_blank">Linkedin</a>
+                        <a href="https://www.linkedin.com/in/steven-hudson-42a79714b" target="_blank">Linkedin</a>
                     </button>
                     <button className="socialbut">
                         <a href="https://www.instagram.com/steven9926/" target="_blank">Instagram</a>
@@ -30,16 +30,12 @@ function Introduction() {
                     <button className="socialbut">
                         <a href="http://localhost:3000/">Portfolio Site</a>
                     </button>
+                    <button className="socialbut">
+                        <a href="">Resume</a>
+                        <FontAwesomeIcon />
+                    </button>
                 </div>
-                <div className="contact">
-                    <button>
-                        Resume
-                        <FontAwesomeIcon />
-                    </button>
-                    <button>
-                        Contact Info
-                        <FontAwesomeIcon />
-                    </button>
+                <div className="">
                 </div>
             </div>
         </Fade>

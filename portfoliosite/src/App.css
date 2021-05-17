@@ -6,12 +6,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s ;
   }
 }
 
 .AppPage {
-    background-color: #005925;
+    background-color: #566E57;
     display: flex;
     flex-direction: column;
     padding-left: 15px;
