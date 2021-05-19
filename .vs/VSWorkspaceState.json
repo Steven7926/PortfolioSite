@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\portfoliosite",
+    "\\portfoliosite\\public",
     "\\portfoliosite\\src",
-    "\\portfoliosite\\src\\components"
+    "\\portfoliosite\\src\\assets",
+    "\\portfoliosite\\src\\components",
+    "\\portfoliosite\\src\\css"
   ],
-  "SelectedNode": "\\portfoliosite\\src\\components\\Introduction.js",
+  "SelectedNode": "\\portfoliosite\\src\\components\\Header.js",
   "PreviewInSolutionExplorer": false
 }

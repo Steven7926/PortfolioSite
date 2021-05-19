@@ -95,12 +95,30 @@
     background-image: linear-gradient(to right, rgb(64,93,230),rgb(88,81,219),rgb(131,58,180),rgb(193,53,132),rgb(225,48,108),rgb(253,29,29),rgb(245,96,64),rgb(247,119,55),rgb(252,175,69),rgb(255,220,128));
 }
 
+.ucf {
+    background-image: linear-gradient(to right, rgb(0,0,0),rgb(204,164,61));
+    border: 2px solid rgb(204,164,61) !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 125vh
+}
+
 .theraplan {
     border: 2px solid #35baf2 !important;
     border-radius: 5px;
     background-color: #35baf2 !important;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
+}
+
+.skills {
+    background-color: blue;
+    border: 2px solid blue !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 80vh
 }
 
 

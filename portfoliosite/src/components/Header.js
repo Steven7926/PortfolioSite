@@ -14,7 +14,7 @@ function Header() {
                         </a>                   
                     </li>
                     <li>
-                        <a href="https://google.com">
+                        <a href="#education">
                             <span>Education </span>
                             <FontAwesomeIcon icon={faUniversity} />
                         </a>                
