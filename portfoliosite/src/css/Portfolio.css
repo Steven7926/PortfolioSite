@@ -101,7 +101,8 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 125vh
+    width: 125vh;
+    float: left
 }
 
 .theraplan {
@@ -113,13 +114,22 @@
 }
 
 .skills {
-    background-color: blue;
-    border: 2px solid blue !important;
+    background-color: #78A2CC;
+    border: 2px solid #78A2CC !important;
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
     width: 80vh
 }
 
+.caption {
+    margin-top: 5px;
+    margin-left: 160px
+}
+
+.iconcap {
+    margin-left: 10px;
+    margin-top: 0px
+}
 
 

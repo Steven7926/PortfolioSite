@@ -20,7 +20,7 @@ function Header() {
                         </a>                
                     </li>
                     <li>
-                        <a href="https://google.com">
+                        <a href="#skills">
                             <span>Skills </span>
                             <FontAwesomeIcon icon={faLaptopCode} />
                         </a>                   

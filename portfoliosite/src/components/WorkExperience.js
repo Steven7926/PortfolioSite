@@ -26,7 +26,7 @@ function WorkExperience() {
                     </div>
                     <div style={{ overflow: 'hidden' }}>
                         <div style={{ fontSize: '20px', marginLeft: '80px', float: 'left' }}>
-                            <Bounce left duration={2000} distance="40px">
+                            <Fade left duration={2000} distance="40px">
                                 <li>Test code modifications using black box and glass box testing to prepare for a production candidate. </li>
                                 <li>Provide solutions and assistance to clients who reach out to the help desk.</li>
                                 <li>Document software bugs, enhancements, and end user requests using Azure Dev Ops.</li>
@@ -38,7 +38,7 @@ function WorkExperience() {
                                 <li>Responsible for integrating SSRS reports into the web app so that no external web portal is needed to run system reports. </li>
                                 <li>Responsible for writing a C# program that cut the deployment time of reports in half.</li>
                                 <br/>
-                            </Bounce>
+                            </Fade>
                         </div>
                         <div style={{ float: 'left', width: '20vh' }}>
                             <img src={theraplan} style={{ width: '30vh', borderRadius: '10px', marginLeft: '32vh', marginTop: '4vh' }} alt="TheraPLan Logo" />

@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUniversity, faLaptopCode, faStar, faBriefcase, faProjectDiagram, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
+import { faLaptopCode, faStar, faBriefcase, faProjectDiagram, faChalkboardTeacher, faDatabase, faFire, faLeaf, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faNode, faJsSquare, faHtml5, faCss3Alt, faBootstrap, faNpm, faMicrosoft, faAws, faVuejs, faAngular, faJava, faPython, faErlang, faReact } from '@fortawesome/free-brands-svg-icons';
 import { Fade, Bounce } from "react-reveal";
 import ucf from '../assets/UCFlogo.png';
 
@@ -8,7 +9,7 @@ import ucf from '../assets/UCFlogo.png';
 function Skills() {
     return (
         <Fade bottom duration={2000} distance="40px">
-            <div className="head" id="education">
+            <div className="head" id="skills">
                 <br />
                 <br />
                 <div style={{ border: '2px solid darkgrey', borderRadius: '5px', backgroundColor: 'darkgrey', boxShadow: '10px 5px 5px black', width: '80vh' }}>
@@ -17,11 +18,67 @@ function Skills() {
                 </div>
                 <div className="skills">
                     <div style={{ overflow: 'hidden', marginTop: '15px' }}>
-                        <div style={{ float: 'left' }}>
-                            <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>University of Central Florida</b> </span>
-                        </div>
-                        <div style={{ float: 'left' }}>
-                            <span style={{ fontSize: '35px', marginLeft: '16vh' }}><b>Fall 2017 - Spring 2021</b></span>
+                        <div style={{ overflow: 'hidden' }}>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faHtml5} size='3x' style={{ marginLeft: '15px' }}/>
+                                <p className = "iconp" >HTML5</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faCss3Alt} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">CSS3</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faBootstrap} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">BootStrap</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faNpm} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">npm</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faNode} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">Node</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faVuejs} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">Vue</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faReact} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">React/React Native</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faAngular} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">Angular</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faJava} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">Java</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faPython} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">Python</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faErlang} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">Erlang</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faMicrosoft} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">Azure</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faAws} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">AWS</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faDatabase} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">SQL</p>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <FontAwesomeIcon icon={faLeaf} size='3x' style={{ marginLeft: '15px' }} />
+                                <p className="iconp">MongoDB</p>
+                            </div>
                         </div>
                     </div>
                     <div style={{ overflow: 'hidden' }}>
@@ -30,35 +87,7 @@ function Skills() {
                         </div>
                         <div style={{ marginRight: '10vh', float: 'right' }}>
                             <Bounce left duration={2000} distance="40px">
-                                <br />
-                                <div>
-                                    <div>
-                                        <span style={{ fontSize: '25px' }}> Major: Computer Engineering </span>
-                                    </div>
-                                    <div>
-                                        <span style={{ fontSize: '25px' }}> Minor: Mathematics </span>
-                                    </div>
-                                    <div>
-                                        <span style={{ fontSize: '25px' }}> GPA: 3.2 </span>
-                                    </div>
-                                    <div>
-                                        <span style={{ fontSize: '25px' }}> Degree Received: Bachelors of Science in Computer Engineering</span>
-                                        <div style={{ marginLeft: '21vh' }}>
-                                            <span style={{ fontSize: '25px' }}>with a minor in Mathematics</span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span style={{ fontSize: '25px' }}> Took courses in the following categories:</span>
-                                        <div style={{ marginLeft: '15vh' }}>
-                                            <li style={{ fontSize: '20px' }}>Computer Architecture</li>
-                                            <li style={{ fontSize: '20px' }}>Data Structures</li>
-                                            <li style={{ fontSize: '20px' }}>Embedded Systems</li>
-                                            <li style={{ fontSize: '20px' }}>Software Design</li>
-                                            <li style={{ fontSize: '20px' }}>Circuit Theory</li>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br />
+                               
                             </Bounce>
                         </div>
                     </div>
