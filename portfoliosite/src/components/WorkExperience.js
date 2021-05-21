@@ -11,9 +11,9 @@ function WorkExperience() {
             <div className="head" id = "workexperience">
                 <br />
                 <br />
-                <div style={{ border: '2px solid darkgrey', borderRadius: '5px', backgroundColor: 'darkgrey', boxShadow: '10px 5px 5px black', width: '80vh' }}>
+                <div style={{width: '80vh' }}>
                     <span style={{ fontSize: '50px', marginLeft: '5px' }}><b>Work Experience </b></span>
-                    <FontAwesomeIcon icon={faBriefcase} size='3x' style={{ float: 'right', marginRight: '5px' }}/>
+                    <FontAwesomeIcon icon={faBriefcase} size='3x' style={{ marginLeft: '5px' }}/>
                 </div>
                 <div className = "theraplan">
                     <div style={{ overflow: 'hidden', marginTop: '15px'}}>

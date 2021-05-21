@@ -119,7 +119,18 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 80vh
+    width: 82vh;
+    float:left
+}
+
+.skillsmark {
+    background-color: #b19cd9;
+    border: 2px solid #b19cd9 !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 80vh;
+    float: left
 }
 
 .caption {
@@ -128,8 +139,24 @@
 }
 
 .iconcap {
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 0px
 }
 
+.iconcapsm {
+    margin-left: 20px;
+    margin-top: 0px
+}
+
+.skillshead {  
+  width: 80vh;
+
+}
+
+.skillslang {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
 
