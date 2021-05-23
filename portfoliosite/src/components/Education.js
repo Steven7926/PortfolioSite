@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUniversity, faLaptopCode, faStar, faBriefcase, faProjectDiagram, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
-import { Fade, Bounce } from "react-reveal";
+import { faUniversity } from '@fortawesome/free-solid-svg-icons'
+import { Fade } from "react-reveal";
 import ucf from '../assets/UCFlogo.png';
 import fam from '../assets/fam.jpg';
 
@@ -69,7 +69,7 @@ function Education() {
                     </div>
                     <div style={{ float: 'left' }}>
                         <img src={fam} style={{ width: '50vh', borderRadius: '10px', marginLeft: '10vh', marginTop: '4vh' }} alt="Family" />
-                        <p className = 'caption' > Me and my family on graguation day!</p>
+                        <p className = 'caption' > Me and my family on graduation day!</p>
                     </div>
                 </div>
 

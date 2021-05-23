@@ -105,6 +105,27 @@
     float: left
 }
 
+.magicmed {
+    background-image: linear-gradient(to right, #1e3f66, #8c2f39 );
+    border: 2px solid #1e3f66 !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 110vh;
+    float: left
+}
+
+.onlysocks {
+    background-image: linear-gradient(to right, #323846, #c66156 );
+    border: 2px solid #c66156 !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 70vh;
+    margin-left: 5vh;
+    float: left
+}
+
 .theraplan {
     border: 2px solid #35baf2 !important;
     border-radius: 5px;

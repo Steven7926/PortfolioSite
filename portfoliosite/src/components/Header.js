@@ -26,7 +26,7 @@ function Header() {
                         </a>                   
                     </li>
                     <li>
-                        <a href="https://google.com">
+                        <a href="#projects">
                             <span>Projects </span>
                             <FontAwesomeIcon icon={faProjectDiagram} />
                         </a>
