@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUniversity, faLaptopCode, faStar, faBriefcase, faProjectDiagram, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
+import { faUniversity, faLaptopCode, faStar, faBriefcase, faProjectDiagram, faChalkboardTeacher, faTools } from '@fortawesome/free-solid-svg-icons'
 import { Bounce } from "react-reveal";
 function Header() {
     return (
@@ -42,6 +42,11 @@ function Header() {
                             <span>Achievements </span>
                             <FontAwesomeIcon icon={faStar} />
                         </a>
+                    </li>
+                    <br />
+                    <li style={{ marginLeft: '30%' }}>
+                        <span style={{ fontWeight: 'bold', color: '#FF6961', fontSize: '30px' }}>Site still under construction </span>
+                        <FontAwesomeIcon icon={faTools} style={{ fontWeight: 'bold', color: '#FF6961' }} size = '2x' />
                     </li>
                 </ul>
             </header>
