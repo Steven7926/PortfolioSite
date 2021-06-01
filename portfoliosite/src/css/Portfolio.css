@@ -126,6 +126,17 @@
     float: left
 }
 
+.contactmanager {
+    background-image: linear-gradient(to right, rgb(59, 184, 130), rgb(34, 25, 77) );
+    border: 2px solid #1e3f66 !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 100%;
+    float: left
+}
+
+
 .theraplan {
     border: 2px solid #35baf2 !important;
     border-radius: 5px;
@@ -179,5 +190,9 @@
     margin-top: 20px;
     margin-bottom: 20px;
 
+}
+
+.split {
+    
 }
 

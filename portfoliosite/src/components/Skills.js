@@ -83,7 +83,10 @@ function Skills() {
                             </div>
                         </div>
                     </div>
-                    <div className="skillsmark" style={{ marginLeft: '20vh', marginBottom: '10px' }}>
+                    <div className="skillsmark" style={{
+                        marginLeft: '20vh', marginBottom: '10px'
+
+                    }}>
                         <div class= "skillslang">
                             <span><b>Languages and Markup</b></span>
                         </div>
