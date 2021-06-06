@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
-import { Fade, Bounce } from "react-reveal";
+import { Fade } from "react-reveal";
 import ucf from '../assets/UCFlogo.png';
 import magicmeds from '../assets/magicmeds.png';
 import magicmedsapp from '../assets/MagicMedsApp.jpg';
