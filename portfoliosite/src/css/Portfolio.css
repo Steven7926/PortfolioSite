@@ -105,6 +105,17 @@
     float: left
 }
 
+.ucfACM {
+    background-image: linear-gradient(to right, rgb(0,0,0),rgb(204,164,61));
+    border: 2px solid rgb(204,164,61) !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 110vh;
+    float: left
+}
+
+
 .magicmed {
     background-image: linear-gradient(to right, #1e3f66, #8c2f39 );
     border: 2px solid #1e3f66 !important;
@@ -117,6 +128,17 @@
 
 .onlysocks {
     background-image: linear-gradient(to right, #323846, #c66156 );
+    border: 2px solid #c66156 !important;
+    border-radius: 5px;
+    box-shadow: 10px 5px 5px black;
+    margin-top: 15px;
+    width: 70vh;
+    margin-left: 5vh;
+    float: left
+}
+
+.teamlead {
+    background-color: #8c2f39;
     border: 2px solid #c66156 !important;
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
@@ -144,6 +166,8 @@
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
 }
+
+
 
 .skills {
     background-color: #78A2CC;
@@ -192,7 +216,9 @@
 
 }
 
-.split {
-    
+.center {
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh
 }
 

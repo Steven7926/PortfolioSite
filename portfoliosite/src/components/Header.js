@@ -32,17 +32,19 @@ function Header() {
                         </a>
                     </li>
                     <li>
-                        <a href="https://google.com">
+                        <a href="#leadership">
                             <span>Leadership </span>
                             <FontAwesomeIcon icon={faChalkboardTeacher} />
                         </a>
                     </li>
-                    <li>
-                        <a href="https://google.com">
-                            <span>Achievements </span>
-                            <FontAwesomeIcon icon={faStar} />
-                        </a>
-                    </li>
+                    {
+                            /* <li>
+                            <a href="">
+                                <span>Achievements </span>
+                                <FontAwesomeIcon icon={faStar} />
+                            </a>
+                        </li>*/
+                    }
                     <br />
                     <li style={{ marginLeft: '30%' }}>
                         <span style={{ fontWeight: 'bold', color: '#FF6961', fontSize: '30px' }}>Site still under construction </span>

@@ -5,6 +5,8 @@ import WorkExperience from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Leadership from "./Leadership";
+import Footer from "./Footer";
 import  "../css/Portfolio.css";
 export default class Main extends Component {
     render() {
@@ -16,6 +18,8 @@ export default class Main extends Component {
                 <Education />
                 <Skills />
                 <Projects />
+                <Leadership />
+                <Footer />
             </div>
         );
     }

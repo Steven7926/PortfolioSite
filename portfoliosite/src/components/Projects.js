@@ -2,8 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
 import { Fade } from "react-reveal";
-import ucf from '../assets/UCFlogo.png';
-import fam from '../assets/fam.jpg';
+import magicmeds from '../assets/magicmeds.png';
+import sock from '../assets/sock.png';
 
 
 function Projects() {
@@ -21,6 +21,7 @@ function Projects() {
                         <div style={{ overflow: 'hidden', marginTop: '15px' }}>
                             <div>
                                 <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>MagicMeds</b> </span>
+                                <img src={magicmeds} style={{ width: '10vh', marginRight: '50px', float: 'right' }} alt="MagicMeds Logo" />
                             </div>
                             <div>
                                 <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>An Automatic Pill Dispenser</b></span>
@@ -53,9 +54,10 @@ function Projects() {
                             <div style={{ overflow: 'hidden', marginTop: '15px' }}>
                                 <div>
                                     <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>OnlySocks</b> </span>
+                                    <img src={sock} style={{ width: '10vh', marginRight: '10px', float: 'right' }} alt="OnlySock Logo" />
                                 </div>
                                 <div>
-                                    <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>A social media platform for socks</b></span>
+                                    <span style={{ fontSize: '30px', marginLeft: '10vh' }}><b>A social media platform for socks</b></span>
                                 </div>
                             </div>
                             <div style={{ overflow: 'hidden' }}>                              
