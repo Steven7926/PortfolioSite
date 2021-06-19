@@ -11,7 +11,7 @@ function Introduction() {
         <Fade bottom duration={2000} distance="40px">
             <div className="head">
                 <div style={{overflow: 'hidden', marginRight: '40px'}}>
-                    <div style={{ float: 'left', width: '95vh'}}>
+                    <div className = "intro">
                         <h1 className = "hello">
                             <span>Hello, Steven Here! </span>
                             <span className="spin">👨‍💻</span>

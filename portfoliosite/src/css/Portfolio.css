@@ -198,14 +198,30 @@
     margin-bottom: 2vh
 }
 
+.intro {
+    float: left;
+    width: 95vh;
+}
+
 
 /* CSS for Mobile*/
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .header {
         font-size: 45px;
+        font-weight: bold;
     }
     .header li {
         float: none;
+    }
+    .header li a {
+        padding: 10px;
+    }
+    .hello {
+        font-size: 65px;
+    }
+    .intro {
+      width: 100%;
+       
     }
 }
