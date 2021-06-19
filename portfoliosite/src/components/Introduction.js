@@ -21,7 +21,7 @@ function Introduction() {
                             I'm experienced in building web and mobile applications using JavaScript, Reactjs, Nodejs,
                             Java, C#, SQL, MongoDB, HTML, and CSS. I also have experience in small scale embedded systems and PCB design! 🖥️
                         </p>
-                        <div>
+                        <div className = "thebuttons">
                             <a style={{ textDecoration: 'none' }} href="https://github.com/Steven7926" target="_blank">
                                 <button className="socialbut" style={{backgroundColor: 'darkgrey'}}>                                  
                                     <span style={{ color: 'white' }}><b>Github </b></span>
@@ -55,8 +55,8 @@ function Introduction() {
                         </div>
                     </div>
                     <Bounce right duration={2000} distance="40px">
-                        <div style={{ float: 'left', marginLeft: '25vh'}}>
-                            <img src={steven} style={{ width: '40vh', borderRadius: '10px', boxShadow: '10px 5px 5px black'  }} alt="Steven" />
+                        <div className = "steven">
+                            <img src={steven} alt="Steven" />
                         </div>
                     </Bounce>
                 </div>

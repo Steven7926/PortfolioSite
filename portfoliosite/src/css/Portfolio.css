@@ -203,6 +203,17 @@
     width: 95vh;
 }
 
+.steven {
+    float: left;
+    margin-left: 25vh;
+}
+
+.steven img {
+    width: 40vh;
+    border-radius: 10px; 
+    box-shadow: 10px 5px 5px black;
+}
+
 
 /* CSS for Mobile*/
 @media only screen and (max-width: 768px) {
@@ -222,6 +233,24 @@
     }
     .intro {
       width: 100%;
-       
+      float: none;
     }
+    .steven {
+        float: none;
+    }
+    .thebuttons {
+        width: 30%
+    }
+    .socialbut {
+        width: 50vh;
+        height: 10vh;
+        float: left;
+        margin-bottom: 10px
+    }
+
+    .steven img {
+        width: 36%;   
+        margin-left: 22%;
+    }
+
 }
