@@ -20,8 +20,7 @@
     display: block;
     padding: 20px;
     color: #fff;
-    text-decoration: none;
-        
+    text-decoration: none;      
 }
 
 .header li a:hover,
@@ -201,7 +200,12 @@
 
 
 /* CSS for Mobile*/
-@media (min-width: 48em) {
-
-
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .header {
+        font-size: 45px;
+    }
+    .header li {
+        float: none;
+    }
 }
