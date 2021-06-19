@@ -13,10 +13,10 @@
 .AppPage {
     background-color: #566E57;
     display: flex;
-    flex-direction: column;
     padding-left: 15px;
     font-size: calc(10px + 1vmin);
     color: white;
+    width: fit-content;
 }
 
 @keyframes App-logo-spin {

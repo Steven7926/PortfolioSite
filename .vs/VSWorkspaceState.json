@@ -4,10 +4,9 @@
     "\\portfoliosite",
     "\\portfoliosite\\public",
     "\\portfoliosite\\src",
-    "\\portfoliosite\\src\\assets",
     "\\portfoliosite\\src\\components",
     "\\portfoliosite\\src\\css"
   ],
-  "SelectedNode": "\\portfoliosite\\src\\components\\Header.js",
+  "SelectedNode": "\\portfoliosite\\src\\App.css",
   "PreviewInSolutionExplorer": false
 }
