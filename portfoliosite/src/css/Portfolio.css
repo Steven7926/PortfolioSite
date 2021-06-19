@@ -219,7 +219,7 @@
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .header {
-        font-size: 45px;
+        font-size: 50px;
         font-weight: bold;
     }
     .header li {
@@ -229,12 +229,19 @@
         padding: 10px;
     }
     .hello {
-        font-size: 65px;
+        font-size: 85px;
     }
     .intro {
       width: 100%;
       float: none;
     }
+
+    .introp {
+        width: 100%;
+        float: none;
+        font-size: 50px;
+    }
+
     .steven {
         float: none;
     }
@@ -249,8 +256,12 @@
     }
 
     .steven img {
-        width: 36%;   
+        width: 39%;   
         margin-left: 22%;
+    }
+
+    .buttonText {
+        font-size: 40px;
     }
 
 }
