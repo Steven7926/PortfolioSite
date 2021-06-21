@@ -214,6 +214,32 @@
     box-shadow: 10px 5px 5px black;
 }
 
+.tphead {
+    font-size: 40px;
+}
+
+.pushleft {
+    margin-left: 40px;
+}
+
+.workexp {
+    font-size: 50px;
+    margin-left: 5px;
+}
+
+.worktext {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 10px;
+    float: left;
+}
+
+.lengththere {
+    font-size: 30px;
+    margin-left: 52vh;
+}
+
+
 
 /* CSS for Mobile*/
 @media only screen and (max-width: 768px) {
@@ -250,17 +276,39 @@
     }
     .socialbut {
         width: 50vh;
-        height: 10vh;
+        height: 15vh;
         float: left;
         margin-bottom: 10px
     }
 
     .steven img {
-        width: 39%;   
+        width: 46%;   
         margin-left: 22%;
     }
 
     .buttonText {
+        font-size: 40px;
+    }
+
+    .tphead {
+        font-size: 60px;
+        text-align: left;
+    }
+
+    .workexp {
+        font-size: 80px;
+        margin-left: 5px;
+    }
+
+    .theraplan {
+        
+    }
+
+    .worktext {
+        font-size: 40px;
+    }
+
+    .lengththere {
         font-size: 40px;
     }
 

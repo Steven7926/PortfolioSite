@@ -8,5 +8,9 @@
     width: fit-content;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 
