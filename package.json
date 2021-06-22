@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "concurrently \"nodemon server.js\" \"cd frontend && npm run start\"",
-    "heroku-postbuild": "cd portfoliosite && npm install && npm run build"
+    "heroku-postbuild": "cd portfoliosite && npm install --force && npm run build"
   },
   "repository": {
     "type": "git",
