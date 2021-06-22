@@ -14,10 +14,10 @@ function Introduction() {
                 <div style={{overflow: 'hidden', marginRight: '40px'}}>
                     <div className="intro">                     
                             <h1 className="hello">
-                                <Typing>
-                                    <span>Hello, Steven Here! </span>
-                                </Typing>
-                                <span className="spin">👨‍💻</span>
+                            <Typing>
+                                <span>Hello, Steven Here! </span>
+                                <span className="spin">👨‍💻</span>  
+                            </Typing>                           
                             </h1>                        
                             <p className="introp">
                                 I'm a computer engineer with a passion for hardware and software development 🤖.
