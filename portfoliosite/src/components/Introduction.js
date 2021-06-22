@@ -4,6 +4,7 @@ import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-
 import { faFile, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Fade, Bounce } from "react-reveal";
 import steven from '../assets/stevenphoto.jpg';
+import Typing from 'react-typing-animation';
 
 
 function Introduction() {
@@ -11,16 +12,18 @@ function Introduction() {
         <Fade bottom duration={2000} distance="40px">
             <div className="head">
                 <div style={{overflow: 'hidden', marginRight: '40px'}}>
-                    <div className = "intro">
-                        <h1 className = "hello">
-                            <span>Hello, Steven Here! </span>
-                            <span className="spin">👨‍💻</span>
-                        </h1>
-                        <p className="introp">
-                            I'm a computer engineer with a passion for hardware and software development 🤖.
-                            I'm experienced in building web and mobile applications using JavaScript, Reactjs, Nodejs,
-                            Java, C#, SQL, MongoDB, HTML, and CSS. I also have experience in small scale embedded systems and PCB design! 🖥️
-                        </p>
+                    <div className="intro">                     
+                            <h1 className="hello">
+                                <Typing>
+                                    <span>Hello, Steven Here! </span>
+                                </Typing>
+                                <span className="spin">👨‍💻</span>
+                            </h1>                        
+                            <p className="introp">
+                                I'm a computer engineer with a passion for hardware and software development 🤖.
+                                I'm experienced in building web and mobile applications using JavaScript, Reactjs, Nodejs,
+                                Java, C#, SQL, MongoDB, HTML, and CSS. I also have experience in small scale embedded systems and PCB design! 🖥️
+                            </p>
                         <div className = "thebuttons">
                             <a style={{ textDecoration: 'none' }} href="https://github.com/Steven7926" target="_blank">
                                 <button className="socialbut" style={{backgroundColor: 'darkgrey'}}>                                  

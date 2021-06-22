@@ -38,12 +38,11 @@ function WorkExperience() {
                                     <li>Create and maintain SSRS reports in Visual Studio using datasets and deploy them to the report server.</li>
                                     <li>Responsible for integrating SSRS reports into the web app so that no external web portal is needed to run system reports. </li>
                                     <li>Responsible for writing a C# program that cut the deployment time of reports in half.</li>
-                                </ul>
-                                <br/>
+                                </ul>   
                             </Fade>
                         </div>
                         <div style={{ float: 'left', width: '20vh' }}>
-                            <img src={theraplan} style={{ width: '30vh', borderRadius: '10px', marginLeft: '50px', marginTop: '4vh' }} alt="TheraPLan Logo" />
+                            <img src={theraplan} className = "worklogo"  alt="TheraPLan Logo" />
                         </div>
                     </div>
                 </div>

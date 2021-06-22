@@ -58,7 +58,7 @@
 }
 
 .socialbut {
-    width: 12vh;
+    width: 13vh;
     height: 4vh;
     cursor: pointer;
     border-radius: 6px;
@@ -239,6 +239,48 @@
     margin-left: 52vh;
 }
 
+.worklogo {
+    width: 30vh;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 4vh
+}
+
+.edu {
+    font-size: 50px;
+    margin-left: 5px;
+}
+
+.univ {
+    font-size: 40px;
+    margin-left: 40px;
+}
+
+.timeatuni {
+    font-size: 35px;
+    margin-left: 16vh;
+}
+
+.theucflogo {
+    width: 40vh;
+    border-radius: 10px;
+    margin-left: 10vh;
+    margin-top: 2vh;
+}
+
+.detailsucf {
+    font-size: 25px;
+}
+
+.majortext {
+    margin-right: 12vh;
+    float: right;
+}
+
+.courses {
+    margin-left: 15vh;
+    font-size: 20px;
+}
 
 
 /* CSS for Mobile*/
@@ -310,6 +352,54 @@
 
     .lengththere {
         font-size: 40px;
+        margin-left: 45vh;
+    }
+
+    .worklogo {
+        width: 50vh;
+        margin-left: 40vh;
+        margin-top: 0px;
+    }
+
+    .ucf {
+        margin-top: 15px;
+        width: 100%;
+        float: left
+    }
+
+    .edu {
+        font-size: 80px;
+        margin-left: 5px;
+    }
+
+    .univ {
+        font-size: 65px;
+        margin-left: 40px;
+    }
+
+    .timeatuni {
+        font-size: 40px;
+        margin-left: 40vh;
+    }
+
+    .theucflogo {
+        width: 40vh;
+        margin-left: 5vh;
+        margin-top: 2vh;
+    }
+
+    .detailsucf {
+        font-size: 45px;
+    }
+
+    .majortext {
+        margin-right: 5vh;
+        float: right;
+    }
+
+    .courses {
+        margin-left: 15vh;
+        font-size: 35px;
     }
 
 }
