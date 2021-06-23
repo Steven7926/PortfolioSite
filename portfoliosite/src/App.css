@@ -12,5 +12,8 @@ html {
     scroll-behavior: smooth;
 }
 
+#root {
+    background-color: #566E57;
+}
 
 
