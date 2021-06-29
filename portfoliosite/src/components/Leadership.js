@@ -28,14 +28,11 @@ function Leadership() {
                         </div>
                         <div style={{ overflow: 'hidden' }}>
                             <div style={{ marginRight: '5vh', float: 'right' }}>
-                                <Fade left duration={2000} distance="40px">
                                     <br />
                                     <img src={acm} style={{ width: '40vh', marginRight: '20px', float: 'right', borderRadius: '5px' }} alt="ACM Logo" />
                                     <br />
-                                </Fade>
                             </div>
                             <div style={{ marginLeft: '5vh', float: 'left' }}>
-                                <Fade left duration={2000} distance="40px">
                                     <br />
                                     <ul>
                                         <li><span>Teach students the fundamentals of <br /> web and mobile development</span></li>
@@ -46,7 +43,6 @@ function Leadership() {
                                         <br />
                                         <li><span>Answer any questions club members <br />had about development.</span></li>
                                     </ul>
-                                </Fade>
                             </div>
                         </div>
                     </div>
@@ -63,7 +59,6 @@ function Leadership() {
                             </div>
                             <div style={{ overflow: 'hidden' }}>
                                 <div style={{ marginRight: '5vh', float: 'right' }}>                                  
-                                    <Fade left duration={2000} distance="40px">
                                         <br />                                       
                                         <ul>
                                             <li><span>Schedule and coordinate <br /> tasks and responsibilities <br /> to ensure deadlines were met.</span></li>
@@ -75,14 +70,11 @@ function Leadership() {
                                             <li><span>Promote teamwork and efficiency <br />  in a healthy team setting </span></li>
                                         </ul>
                                         <br />
-                                    </Fade>
                                 </div>
                                 <div style={{ float: 'left' }}>
-                                    <Fade left duration={2000} distance="40px">
                                         <br />
                                         <img src={magicmedsapp} style={{ width: '24vh', marginLeft: '50px', float: 'right', borderRadius: '5px' }} alt="MagicMeds App" />
                                         <br />
-                                    </Fade>
                                 </div>
                             </div>
                         </div>

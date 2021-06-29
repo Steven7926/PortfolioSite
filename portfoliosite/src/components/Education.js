@@ -30,8 +30,7 @@ function Education() {
                             <div style={{ float: 'left'}}>
                                 <img src={ucf} className = "theucflogo" alt="UCF Logo" />
                             </div>
-                            <div className = "majortext">
-                                <Fade left duration={2000} distance="40px">
+                            <div className = "majortext">                               
                                     <br />
                                     <div className = "detailsucf">
                                         <div>
@@ -63,7 +62,6 @@ function Education() {
                                         </div>
                                     </div>
                                     <br />
-                                </Fade>
                             </div>
                         </div>
                     </div>

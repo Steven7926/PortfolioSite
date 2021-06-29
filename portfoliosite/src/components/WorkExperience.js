@@ -25,8 +25,7 @@ function WorkExperience() {
                         </div>
                     </div>
                     <div style={{ overflow: 'hidden' }}>
-                        <div className = "worktext">
-                            <Fade left duration={2000} distance="40px">
+                        <div className = "worktext">                          
                                 <ul>
                                     <li>Test code modifications using black box and glass box testing to prepare for a production candidate. </li>
                                     <li>Provide solutions and assistance to clients who reach out to the help desk.</li>
@@ -39,7 +38,6 @@ function WorkExperience() {
                                     <li>Responsible for integrating SSRS reports into the web app so that no external web portal is needed to run system reports. </li>
                                     <li>Responsible for writing a C# program that cut the deployment time of reports in half.</li>
                                 </ul>   
-                            </Fade>
                         </div>
                         <div style={{ float: 'left', width: '20vh' }}>
                             <img src={theraplan} className = "worklogo"  alt="TheraPLan Logo" />

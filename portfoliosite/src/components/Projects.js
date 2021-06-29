@@ -35,8 +35,7 @@ function Projects() {
                                     <br />                                   
                                 </Fade>
                             </div>
-                            <div style={{ marginLeft: '5vh', float: 'left' }}>
-                                <Fade left duration={2000} distance="40px">
+                            <div style={{ marginLeft: '5vh', float: 'left' }}>                               
                                     <br />
                                     <ul>
                                         <li><span>MERN stack based mobile app for <br />scheduiling pills and sending <br />notifications to both users and caregivers</span></li>
@@ -45,7 +44,6 @@ function Projects() {
                                         <br />
                                         <li><span>Custom designed motor controller PCB <br />with Atmega328 receiving data via SPI<br /> from the Raspberry Pi.</span></li>
                                     </ul>
-                                </Fade>
                             </div>
                         </div>
                     </div>
@@ -62,7 +60,6 @@ function Projects() {
                             </div>
                             <div style={{ overflow: 'hidden' }}>                              
                                 <div style={{ marginRight: '5vh', float: 'right' }}>
-                                    <Fade left duration={2000} distance="40px">
                                         <br />
                                         <ul>
                                             <li><span>MERN stack based mobile/web app <br />mimicking social media apps but <br />users can only post about socks.</span></li>
@@ -72,7 +69,6 @@ function Projects() {
                                             <li><span>Features such as forgot password,  <br />followers, statuses, likes,  profile  <br />pictures implemented. </span></li>
                                         </ul>
                                         <br />
-                                    </Fade>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +85,6 @@ function Projects() {
                                 <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>A simple contact manager</b></span>
                             </div>                     
                             <div style={{ marginLeft: '5vh'}}>
-                                <Fade left duration={2000} distance="40px">
                                     <br />
                                     <ul>
                                         <li><span>LAMP stack based web app for <br /> managing contacts. </span></li>
@@ -98,7 +93,6 @@ function Projects() {
                                         <br />
                                         <li><span>Add and delete contacts.</span></li>
                                     </ul>
-                                </Fade>
                             </div>
                         </div>
                         <div style={{ marginRight: '5vh', float: "right" }}>
@@ -109,7 +103,6 @@ function Projects() {
                                 <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>A simple event manager.</b></span>
                             </div>
                             <div style={{ marginLeft: '5vh', float: 'left' }}>
-                                <Fade left duration={2000} distance="40px">
                                     <br />
                                     <ul>
                                         <li><span>LAMP stack based web app for <br /> managing events. </span></li>
@@ -118,7 +111,6 @@ function Projects() {
                                         <br />
                                         <li><span>Add and delete events for approval<br /> by an admin user.</span></li>
                                     </ul>
-                                </Fade>
                             </div>
                         </div>
                     </div>
