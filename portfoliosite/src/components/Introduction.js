@@ -13,8 +13,9 @@ function Introduction() {
             <div className="head">
                 <div style={{overflow: 'hidden', marginRight: '40px'}}>
                     <div className="intro">                     
-                            <h1 className="hello">
+                        <h1 className="hello">
                             <Typing>
+                                <Typing.Delay ms={500} />
                                 <span>Hello, Steven Here! </span>
                                 <span className="spin">👨‍💻</span>  
                             </Typing>                           
