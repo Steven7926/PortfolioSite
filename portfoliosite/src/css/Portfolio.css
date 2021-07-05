@@ -98,8 +98,7 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 110vh;
-    float: left
+    float: left;
 }
 
 .onlysocks {
@@ -108,9 +107,9 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 70vh;
     margin-left: 5vh;
-    float: left
+    float: left;
+    width: 134%;
 }
 
 .teamlead {
@@ -151,8 +150,9 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 82vh;
-    float:left
+    width: 51%;
+    float: left;
+    margin-bottom: 10px;
 }
 
 .skillsmark {
@@ -161,8 +161,41 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 80vh;
+    width: 45%;
     float: left
+}
+
+.cicon {
+    width: 8vh;
+    margin-left: 20px;
+    margin-top: -20px;
+}
+
+.ccom {
+    margin-left: 54px;
+    margin-top: -12px;
+}
+
+.csharpicon {
+    width: 11vh;
+    margin-left: -17px;
+    margin-top: -9px;
+}
+
+.csharpcom {
+    margin-left: 35px;
+    margin-top: -3px;
+}
+
+.cplusplusicon {
+    width: 10vh;
+    margin-left: -25px;
+    margin-top: -29px
+}
+
+.cpluscom {
+    margin-left: 9px;
+    margin-top: -24px;
 }
 
 .caption {
@@ -181,8 +214,7 @@
 }
 
 .skillshead {  
-  width: 80vh;
-
+  width: 80%;
 }
 
 .skillslang {

@@ -10,7 +10,7 @@ import acm from '../assets/ACM.png';
 function Leadership() {
     return (
         <Fade bottom duration={2000} distance="40px">
-            <div className="head" id="leadership">
+            <div className="head" id="leadership" style={{ height: '800px' }}>
                 <div>
                     <span style={{ fontSize: '50px', marginLeft: '5px' }}><b>Leadership </b></span>
                     <FontAwesomeIcon icon={faChalkboardTeacher} size='3x' style={{ marginLeft: '5px' }} />
