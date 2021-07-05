@@ -37,7 +37,7 @@ function WorkExperience() {
                                     <li>Responsible for writing a C# program that cut the deployment time of reports in half.</li>
                                 </ul>   
                         </div>
-                        <div style={{ float: 'left', width: '20vh' }}>
+                        <div>
                             <img src={theraplan} className = "worklogo"  alt="TheraPLan Logo" />
                         </div>
                     </div>

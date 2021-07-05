@@ -47,17 +47,14 @@ function Header() {
                     }                   
                 </ul>             
             </div>
-            {
-                /*<div>
+            
+                <div>
                     <div style={{ marginLeft: '30%' }}>
                         <span style={{ fontWeight: 'bold', color: '#FF6961', fontSize: '30px' }}>Site still under construction </span>
                         <FontAwesomeIcon icon={faTools} style={{ fontWeight: 'bold', color: '#FF6961' }} size='2x' />
                     </div>
-                    <div style={{ marginLeft: '35%' }}>
-                        <span style={{ fontWeight: 'bold', color: '#FF6961', fontSize: '15px' }}>Next update: Mobile Friendly </span>
-                    </div>
-                </div>*/
-            }
+                </div>
+            
         </Bounce>
     );
 }

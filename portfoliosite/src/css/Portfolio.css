@@ -77,7 +77,6 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 125vh;
     float: left
 }
 
@@ -87,7 +86,6 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 110vh;
     float: left
 }
 
@@ -109,7 +107,6 @@
     margin-top: 15px;
     margin-left: 5vh;
     float: left;
-    width: 111%;
 }
 
 .teamlead {
@@ -118,7 +115,6 @@
     border-radius: 5px;
     box-shadow: 10px 5px 5px black;
     margin-top: 15px;
-    width: 70vh;
     margin-left: 5vh;
     float: left
 }
@@ -138,7 +134,7 @@
     border: 2px solid #35baf2 !important;
     border-radius: 5px;
     background-color: #35baf2 !important;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 40px black;
     margin-top: 15px;
 }
 
@@ -232,12 +228,13 @@
 
 .intro {
     float: left;
-    width: 95vh;
+    width: 60%;
 }
 
 .steven {
     float: left;
-    margin-left: 25vh;
+    margin-left: 100px;
+    margin-bottom: 4px;
 }
 
 .steven img {
@@ -272,10 +269,10 @@
 }
 
 .worklogo {
-    width: 40vh;
     border-radius: 10px;
-    margin-left: 120px;
-    margin-top: 0vh
+    margin-right: 120px;
+    margin-top: 0px;
+    float: right
 }
 
 .edu {
@@ -357,7 +354,7 @@
 
     .steven img {
         width: 46%;   
-        margin-left: 22%;
+        margin-left: 15%;
     }
 
     .buttonText {
