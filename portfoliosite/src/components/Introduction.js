@@ -58,11 +58,9 @@ function Introduction() {
                             </a>
                         </div>
                     </div>
-                    <Bounce right duration={2000} distance="40px">
-                        <div className = "steven">
-                            <img src={steven} alt="Steven" />
-                        </div>
-                    </Bounce>
+                    <div className = "steven">
+                        <img src={steven} alt="Steven" />
+                    </div>
                 </div>
             </div>
         </Fade>

@@ -7,8 +7,9 @@ import theraplan from '../assets/TheraplanLogo.png';
 
 function WorkExperience() {
     return (
-        <Fade bottom duration={2000} distance="40px">
-            <div className="head" id = "workexperience">
+        <div className="head" id="workexperience">
+            <Fade bottom duration={2000} distance="40px">
+            
                 <div style={{width: '100%' }}>
                     <span className = "workexp" ><b>Work Experience </b></span>
                     <FontAwesomeIcon icon={faBriefcase} size='3x' style={{ marginLeft: '5px' }}/>
@@ -42,8 +43,9 @@ function WorkExperience() {
                         </div>
                     </div>
                 </div>
-            </div>
-        </Fade>
+            
+            </Fade>
+        </div>
     );
 }
 export default WorkExperience;

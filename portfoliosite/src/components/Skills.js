@@ -14,16 +14,14 @@ import haskell from '../assets/haskell.png';
 
 function Skills() {
     return (
-        <div id="skills">
+        <div id="skills" className = "head projectstop">
             <Fade bottom duration={2000} distance="40px">
                 <div className="head">
-                    <br />
-                    <br />
-                    <div className= "skillshead">
+                    <div>
                         <span style={{ fontSize: '50px', marginLeft: '5px' }}><b>Skills </b></span>
                         <FontAwesomeIcon icon={faLaptopCode} size='3x' style={{ marginLeft: '5px' }} />
                     </div>
-                    <div style={{ overflow: 'hidden', marginTop: '15px' }}>
+                    <div style={{ marginTop: '15px' }}>
                         <div className="skills">
                             <div style={{ overflow: 'hidden', marginTop: '15px' }}>
                                 <div class="skillslang">
@@ -145,7 +143,7 @@ function Skills() {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    '<div style={{ float: 'left' }}>
                         <b>Confidence with Languages</b>
                         <br />
                         <div style={{ overflow: 'hidden' }}>

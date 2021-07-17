@@ -9,27 +9,27 @@ import acm from '../assets/ACM.png';
 
 function Leadership() {
     return (
-        <Fade bottom duration={2000} distance="40px">
-            <div className="head" id="leadership" style={{ height: '800px' }}>
+     <div id="leadership" className="head projectstop">
+        <Fade bottom duration={2000} distance="40px">          
                 <div>
                     <span style={{ fontSize: '50px', marginLeft: '5px' }}><b>Leadership </b></span>
                     <FontAwesomeIcon icon={faChalkboardTeacher} size='3x' style={{ marginLeft: '5px' }} />
                 </div>
                 <div>
                     <div className="ucfACM">
-                        <div style={{ overflow: 'hidden', marginTop: '15px' }}>
+                        <div style={{ marginTop: '15px' }}>
                             <div>
-                                <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>Association of Computer Machinery (ACM)</b> </span>
+                                <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>Association of Computer Machinery <span className = "ACMack">(ACM)</span></b> </span>
                                 <img src={ucf} style={{ width: '10vh', marginRight: '90px', float: 'right' }} alt="UCF Logo" />
                             </div>
                             <div>
-                                <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>Web & Mobile Dev Director</b></span>
+                                <span className = "responsibility"><b>Web & Mobile Dev Director</b></span>
                             </div>
                         </div>
-                        <div style={{ overflow: 'hidden' }}>
+                        <div>
                             <div style={{ marginRight: '5vh', float: 'right' }}>
                                     <br />
-                                    <img src={acm} style={{ width: '40vh', marginRight: '20px', float: 'right', borderRadius: '5px' }} alt="ACM Logo" />
+                                    <img src={acm} className = "ucfACMlogo" alt="ACM Logo" />
                                     <br />
                             </div>
                             <div style={{ marginLeft: '5vh', float: 'left' }}>
@@ -41,14 +41,14 @@ function Leadership() {
                                         <br />
                                         <li><span>Promote fun side projects and help <br /> club members who pursued them</span></li>
                                         <br />
-                                        <li><span>Answer any questions club members <br />had about development.</span></li>
+                                        <li><span>Answer any questions club members <br />had about development.</span></li>                                       
                                     </ul>
                             </div>
                         </div>
                     </div>
                     <div style={{ float: 'left' }}>
                         <div class="teamlead">
-                            <div style={{ overflow: 'hidden', marginTop: '15px' }}>
+                            <div style={{ marginTop: '15px' }}>
                                 <div>
                                     <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>Team Leader</b> </span>
                                     <img src={magicmeds} style={{ width: '10vh', marginRight: '20px', float: 'right' }} alt="MagicMeds Logo" />
@@ -57,7 +57,7 @@ function Leadership() {
                                     <span style={{ fontSize: '25px', marginLeft: '8vh' }}><b>Team Leader on Senior Design Project</b></span>
                                 </div>
                             </div>
-                            <div style={{ overflow: 'hidden' }}>
+                            <div>
                                 <div style={{ marginRight: '5vh', float: 'right' }}>                                  
                                         <br />                                       
                                         <ul>
@@ -81,8 +81,9 @@ function Leadership() {
                     </div>
                 </div>
                 <br />
-            </div>
+           
         </Fade>
+     </div>
     );
 }
 export default Leadership;

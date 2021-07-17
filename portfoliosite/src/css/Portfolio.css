@@ -75,16 +75,17 @@
     background-image: linear-gradient(to right, rgb(0,0,0),rgb(204,164,61));
     border: 2px solid rgb(204,164,61) !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
-    float: left
+    float: left;
+    margin-bottom: 8px;
 }
 
 .ucfACM {
     background-image: linear-gradient(to right, rgb(0,0,0),rgb(204,164,61));
     border: 2px solid rgb(204,164,61) !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
     float: left
 }
@@ -94,7 +95,7 @@
     background-image: linear-gradient(to right, #1e3f66, #8c2f39 );
     border: 2px solid #1e3f66 !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
     float: left;
 }
@@ -103,7 +104,7 @@
     background-image: linear-gradient(to right, #323846, #c66156 );
     border: 2px solid #c66156 !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
     margin-left: 5vh;
     float: left;
@@ -113,7 +114,7 @@
     background-color: #8c2f39;
     border: 2px solid #c66156 !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
     margin-left: 5vh;
     float: left
@@ -123,7 +124,7 @@
     background-image: linear-gradient(to right, rgb(59, 184, 130), rgb(34, 25, 77) );
     border: 2px solid #1e3f66 !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
     width: 100%;
     float: left
@@ -134,7 +135,7 @@
     border: 2px solid #35baf2 !important;
     border-radius: 5px;
     background-color: #35baf2 !important;
-    box-shadow: 1px 2px 40px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
 }
 
@@ -144,7 +145,7 @@
     background-color: #78A2CC;
     border: 2px solid #78A2CC !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
     width: 51%;
     float: left;
@@ -155,7 +156,7 @@
     background-color: #b19cd9;
     border: 2px solid #b19cd9 !important;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 30px black;
     margin-top: 15px;
     width: 45%;
     float: left
@@ -210,7 +211,12 @@
 }
 
 .skillshead {  
-  width: 80%;
+  width: 100%;
+}
+
+.projectstop {
+    float: left;
+    margin-top: 40px;
 }
 
 .skillslang {
@@ -240,8 +246,11 @@
 .steven img {
     width: 40vh;
     border-radius: 10px; 
-    box-shadow: 10px 5px 5px black;
+    box-shadow: 1px 2px 20px black;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 
 .tphead {
     font-size: 40px;
@@ -309,6 +318,17 @@
 .courses {
     margin-left: 15vh;
     font-size: 20px;
+}
+
+.ucfACMlogo {
+    width: 40vh;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.responsibility {
+    font-size: 30px;
+    margin-left: 15vh;
 }
 
 
@@ -431,4 +451,89 @@
         font-size: 35px;
     }
 
+}
+
+
+/* CSS for Laptops*/
+@media only screen and (min-width : 768px) and (max-width: 1540px){
+
+    .hello {
+        font-size: 65px;
+    }
+
+
+    .socialbut {
+        width: 20vh;
+        height: 6vh;
+        float: left;
+        margin-bottom: 10px
+    }
+
+    .steven img {
+        width: 30%;
+        margin-left: 10%;
+    }
+
+    .ucfACM {
+        width: 55%;
+    }
+
+    .ucfACMlogo {
+        width: 30vh;
+        margin-right: 20px;
+        border-radius: 5px;
+    }
+
+    .teamlead {
+        margin-left: 20px;
+        width: 104%;
+    }
+
+    .steven {
+        float: none;
+    }
+
+    .buttonText {
+        font-size: 20px;
+    }
+
+    .worklogo {
+        width: 15%;
+        margin-left: 20px;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+
+    .majortext {
+        float: none; 
+        margin-left: 60vh;
+    }
+
+    .timeatuni {
+        font-size: 30px;
+        margin-left: 40px;
+    }
+
+    .magicmed {
+     
+    }
+
+    .onlysocks {
+        margin-left: 20px;
+    }
+
+    #magicframe {
+        width: 415px;
+        height: 300px;
+        border-radius: 5px;
+        margin-bottom: 27px;
+    }
+
+    .ACMack {
+        margin-left: 40vh;
+    }
+
+    .responsibility {
+        margin-left: 22vh;
+    }
 }

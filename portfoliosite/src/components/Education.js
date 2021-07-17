@@ -9,16 +9,14 @@ import GradPhoto from "./GradPhoto";
 function Education() {
 
     return (
-        <div id="education">
+        <div id="education" className = "head projectstop">
             <Fade bottom duration={2000} distance="40px">
-                <div className="head">
-                    <br />
-                    <br />
+                <div>
                     <div>
                         <span className = "edu" ><b>Education </b></span>
                         <FontAwesomeIcon icon={faUniversity} size='3x' style={{ marginLeft: '5px' }} />
                     </div>
-                    <div style={{ overflow: 'hidden' }}> 
+                    <div> 
                         <div className="ucf">
                             <div style={{ overflow: 'hidden', marginTop: '15px' }}>
                                 <div style={{ float: 'left' }}>

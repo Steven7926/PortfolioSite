@@ -8,13 +8,11 @@ import sock from '../assets/sock.png';
 
 function Projects() {
     return (
-        <div id="projects" style={{ height: '1100px'}}>
+        <div id="projects" className = "head projectstop">
             <Fade bottom duration={2000} distance="40px">
-                <div className="head">
-                    <br />
-                    <br />
+                <div>
                     <div>
-                        <span style={{ fontSize: '50px', marginLeft: '5px' }}><b>Projects </b></span>
+                        <span style={{ fontSize: '50px', marginLeft: '5px'}}><b>Projects </b></span>
                         <FontAwesomeIcon icon={faProjectDiagram} size='3x' style={{ marginLeft: '5px' }} />
                     </div>
                     <div>
@@ -31,7 +29,7 @@ function Projects() {
                             <div style={{ overflow: 'hidden' }}>
                                 <div style={{ marginRight: '3vh', marginLeft: '2vh', float: 'right' }}>
                                     <br />
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-0bP6SvqajM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+                                    <iframe id ="magicframe" src="https://www.youtube.com/embed/-0bP6SvqajM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen/>
                                     <br />                                   
                                 </div>
                                 <div style={{ marginLeft: '5vh', float: 'left' }}>                               
