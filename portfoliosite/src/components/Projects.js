@@ -5,7 +5,7 @@ import { Fade } from "react-reveal";
 import magicmeds from '../assets/magicmeds.png';
 import sock from '../assets/sock.png';
 import onlysocks from '../assets/OnlySocks.jpg';
-
+import contactmanager from '../assets/ContactManager.PNG';
 
 function Projects() {
     return (
@@ -98,7 +98,12 @@ function Projects() {
                                             <br />
                                             <li><span>Add and delete contacts.</span></li>
                                         </ul>
-                                </div>
+                                </div>                              
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <br />
+                                <img src={contactmanager} className="contact" alt="Conatct App" />
+                                <br />
                             </div>
                             <div style={{ marginRight: '5vh', float: "right" }}>
                                 <div>

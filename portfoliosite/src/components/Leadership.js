@@ -20,7 +20,7 @@ function Leadership() {
                         <div style={{ marginTop: '15px' }}>
                             <div>
                                 <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>Association of Computer Machinery <span className = "ACMack">(ACM)</span></b> </span>
-                                <span style={{ marginLeft: '115px'}}><img src={ucf} style={{ width: '10vh', marginRight: '20px', float: 'right' }} alt="UCF Logo" /></span>
+                                <span style={{ marginLeft: '16px'}}><img src={ucf} style={{ width: '10vh', marginRight: '20px', float: 'right' }} alt="UCF Logo" /></span>
                             </div>
                             <div>
                                 <span className = "responsibility"><b>Web & Mobile Dev Director</b></span>
@@ -76,7 +76,7 @@ function Leadership() {
                                 </div>
                                 <div style={{ float: 'left' }}>
                                         <br />
-                                        <img src={magicmedsapp} style={{ width: '22vh', marginLeft: '70px', float: 'right', borderRadius: '5px' }} alt="MagicMeds App" />
+                                        <img src={magicmedsapp} style={{ width: '22vh', marginLeft: '170px', float: 'right', borderRadius: '5px' }} alt="MagicMeds App" />
                                         <br />
                                 </div>
                             </div>

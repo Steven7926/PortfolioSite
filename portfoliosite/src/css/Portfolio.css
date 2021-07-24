@@ -341,13 +341,21 @@
 }
 
 .ACMLead {
-    margin-right: -1vh;
+    margin-right: -5vh;
     float: right;
 }
 
 .thesockapp {
     width: 200px;
     margin-left: 50px;
+    float: right;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.contact {
+    width: 700px;
+    margin-left: 26px;
     float: right;
     border-radius: 5px;
     margin-bottom: 20px;
