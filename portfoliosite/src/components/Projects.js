@@ -4,6 +4,7 @@ import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
 import { Fade } from "react-reveal";
 import magicmeds from '../assets/magicmeds.png';
 import sock from '../assets/sock.png';
+import onlysocks from '../assets/OnlySocks.jpg';
 
 
 function Projects() {
@@ -52,10 +53,15 @@ function Projects() {
                                         <img src={sock} style={{ width: '10vh', marginRight: '10px', float: 'right' }} alt="OnlySock Logo" />
                                     </div>
                                     <div>
-                                        <span style={{ fontSize: '30px', marginLeft: '10vh' }}><b>A social media platform for socks</b></span>
+                                        <span style={{ fontSize: '28px', marginLeft: '10vh' }}><b>A social media platform for socks</b></span>
                                     </div>
                                 </div>
-                                <div>                              
+                                <div>  
+                                    <div style={{ float: 'left' }}>
+                                        <br />
+                                        <img src={onlysocks} className = "thesockapp" alt="OnlySocks App" />
+                                        <br />
+                                    </div>
                                     <div style={{ marginRight: '5vh', float: 'right' }}>
                                             <br />
                                             <ul>
@@ -64,6 +70,8 @@ function Projects() {
                                                 <li><span>AWS and S3 used for hosting <br />and storing photos.</span></li>
                                                 <br />
                                                 <li><span>Features such as forgot password,  <br />followers, statuses, likes,  profile  <br />pictures implemented. </span></li>
+                                                <br />
+                                                <li><span>Both mobile app and web interface<br /> created to mimic similar behaviors.</span></li>
                                             </ul>
                                             <br />
                                     </div>

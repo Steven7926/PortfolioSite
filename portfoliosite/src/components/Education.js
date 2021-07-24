@@ -4,7 +4,6 @@ import { faUniversity } from '@fortawesome/free-solid-svg-icons'
 import { Fade } from "react-reveal";
 import ucf from '../assets/UCFlogo.png';
 import fam from '../assets/fam.jpg';
-import GradPhoto from "./GradPhoto";
 
 function Education() {
 

@@ -24,7 +24,7 @@ function Skills() {
                     <div style={{ marginTop: '15px' }}>
                         <div className="skills">
                             <div style={{ overflow: 'hidden', marginTop: '15px' }}>
-                                <div class="skillslang">
+                                <div className="skillslang">
                                     <span><b>Frameworks, Libraries, and Technologies</b></span>
                                 </div>
                                 <div style={{ overflow: 'hidden' }}>    
@@ -143,7 +143,7 @@ function Skills() {
                             </div>
                         </div>
                     </div>
-                    '<div style={{ float: 'left' }}>
+                    <div style={{ float: 'left' }}>
                         <b>Confidence with Languages</b>
                         <br />
                         <div style={{ overflow: 'hidden' }}>
