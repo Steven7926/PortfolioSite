@@ -17,7 +17,7 @@ function WorkExperience() {
                 <div className = "theraplan">
                     <div style={{ overflow: 'hidden', marginTop: '15px'}}>
                         <div className = "pushleft">
-                                <span className = "tphead" ><b>TheraPlan</b> - Developer, Tester, and Support Specialist </span>                    
+                            <a className="tphead" href="https://theraplan.com" target="_blank"><b>TheraPlan</b> - Developer, Tester, and Support Specialist </a>                    
                         </div>
                         <div style={{ float: 'left' }}>
                             <span className = "lengththere" ><b>June 2017 - Present</b></span>

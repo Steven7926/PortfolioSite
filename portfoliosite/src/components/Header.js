@@ -6,7 +6,7 @@ function Header() {
     return (
         <Bounce left duration={2000} distance="40px">
             <div className="header">
-                <ul className = "menu">
+                <ul className= "menu">
                     <li>
                         <a href="#workexperience">
                             <span>Work Experience </span>

@@ -6,6 +6,7 @@ import magicmeds from '../assets/magicmeds.png';
 import sock from '../assets/sock.png';
 import onlysocks from '../assets/OnlySocks.jpg';
 import contactmanager from '../assets/ContactManager.PNG';
+import eventmanager from '../assets/EventManager.PNG';
 
 function Projects() {
     return (
@@ -96,7 +97,9 @@ function Projects() {
                                             <br />
                                             <li><span>jQuery Datatables for easy data manipulation.</span></li>
                                             <br />
-                                            <li><span>Add and delete contacts.</span></li>
+                                            <li><span>Add, edit and delete and search <br /> for contacts.</span></li>
+                                            <br />
+                                            <li><span>Hosted using GoDaddy.</span></li>
                                         </ul>
                                 </div>                              
                             </div>
@@ -120,8 +123,15 @@ function Projects() {
                                             <li><span>Different user types implemented <br />for event hosts, admin, and event attendees. </span></li>
                                             <br />
                                             <li><span>Add and delete events for approval<br /> by an admin user.</span></li>
+                                            <br />
+                                            <li><span>Different views served to the <br /> user depending on the users type.</span></li>
                                         </ul>
                                 </div>
+                            </div>
+                            <div style={{ float: 'left' }}>
+                                <br />
+                                <img src={eventmanager} className="contact" alt="Event App" />
+                                <br />
                             </div>
                         </div>
                     </div>

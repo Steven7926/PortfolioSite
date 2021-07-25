@@ -7,7 +7,6 @@
 
 .header ul {
     margin: 0;
-    padding: 0;
     list-style: none;
     overflow: hidden;
 }
@@ -26,8 +25,23 @@
 .header li a:hover,
 .header .menu-btn:hover {
     background-color: #2d2e2d;
-    border-radius: 8px;
+    border-radius: 50px;
+    opacity: 1;
+    transform: scale(1.15);
+    transition: 0.4s;
 }
+
+.header li a,
+.header .menu-btn {
+     transition: 0.4s;
+}
+
+.menu {
+    padding-left: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 
 .spin {
     animation-name: spin-animation; /* Refers to the name of your @keyframes element below */
@@ -58,13 +72,20 @@
 }
 
 .socialbut {
-    width: 13vh;
+    width: 15vh;
     height: 4vh;
     cursor: pointer;
     border-radius: 6px;
     border: 3px solid grey;
     margin-right: 1vh;
+    margin-left: 1vh;
     padding-bottom: 5px;
+    transition: 0.4s;
+}
+
+.socialbut:hover {
+    transform: scale(1.15);
+    transition: 0.4s;
 }
 
 .grad {
@@ -108,6 +129,10 @@
     margin-top: 15px;
     margin-left: 5vh;
     float: left;
+}
+
+.thebuttons {
+    padding-left: 115px;
 }
 
 .teamlead {
@@ -255,6 +280,14 @@
 
 .tphead {
     font-size: 40px;
+    color: white;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.tphead:hover {
+   transition: 0.4s;
+   transform: scale(1.15);
 }
 
 .pushleft {
@@ -400,7 +433,8 @@
         float: none;
     }
     .thebuttons {
-        width: 30%
+        width: 30%;
+        padding-left: 0px;
     }
     .socialbut {
         width: 50vh;
