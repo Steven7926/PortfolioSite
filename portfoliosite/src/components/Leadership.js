@@ -18,9 +18,9 @@ function Leadership() {
                 <div>
                     <div className="ucfACM">
                         <div style={{ marginTop: '15px' }}>
-                            <div>
-                                <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>Association of Computer Machinery <span className = "ACMack">(ACM)</span></b> </span>
-                                <span style={{ marginLeft: '16px'}}><img src={ucf} style={{ width: '10vh', marginRight: '20px', float: 'right' }} alt="UCF Logo" /></span>
+                            <div className="pop">
+                                <a className="themedname" href="https://ucfacmw.org/" target="_blank"><b>Association of Computer Machinery <span className = "ACMack">(ACM)</span></b> </a>
+                                <a href="https://ucfacmw.org/" target="_blank" style={{ marginLeft: '10px'}}><img src={ucf} style={{ width: '10vh', marginRight: '25px', float: 'right' }} alt="UCF Logo" /></a>
                             </div>
                             <div>
                                 <span className = "responsibility"><b>Web & Mobile Dev Director</b></span>
@@ -52,9 +52,9 @@ function Leadership() {
                     <div style={{ float: 'left' }}>
                         <div class="teamlead">
                             <div style={{ marginTop: '15px' }}>
-                                <div>
-                                    <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>Team Leader</b> </span>
-                                    <img src={magicmeds} style={{ width: '10vh', marginRight: '20px', float: 'right' }} alt="MagicMeds Logo" />
+                                <div className="pop">
+                                    <a className="themedname" href="https://www.cecs.ucf.edu/SeniorDesignShowcase/team/magicmeds-automatic-pill-dispenser/" target="_blank"><b>Team Leader</b> </a>
+                                    <a href="https://www.cecs.ucf.edu/SeniorDesignShowcase/team/magicmeds-automatic-pill-dispenser/" target="_blank"><img src={magicmeds} style={{ width: '10vh', marginRight: '20px', float: 'right' }} alt="MagicMeds Logo" /></a>
                                 </div>
                                 <div>
                                     <span style={{ fontSize: '25px', marginLeft: '8vh' }}><b>Team Leader on Senior Design Project</b></span>

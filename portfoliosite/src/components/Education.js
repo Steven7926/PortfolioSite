@@ -18,8 +18,8 @@ function Education() {
                     <div> 
                         <div className="ucf">
                             <div style={{ overflow: 'hidden', marginTop: '15px' }}>
-                                <div style={{ float: 'left' }}>
-                                    <span className = "univ" ><b>University of Central Florida</b> </span>
+                                <div className = "uniname">
+                                    <a className="univ" href="https://ucf.edu" target="_blank"><b>University of Central Florida</b> </a>
                                 </div>
                                 <div style={{ float: 'left' }}>
                                     <span className = "timeatuni"><b>Fall 2017 - Spring 2021</b></span>

@@ -20,10 +20,11 @@ function Projects() {
                     <div>
                         <div className="magicmed">
                             <div style={{ overflow: 'hidden', marginTop: '15px' }}>
-                                <div>
-                                    <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>MagicMeds</b> </span>
-                                    <img src={magicmeds} style={{ width: '10vh', marginRight: '50px', float: 'right' }} alt="MagicMeds Logo" />
+                                <div className = "pop">
+                                    <a className="themedname" href="https://github.com/Steven7926/PillDispenserMobile" target="_blank"><b>MagicMeds</b> </a>
+                                    <a href="https://github.com/Steven7926/PillDispenserMobile" target="_blank"> <img src={magicmeds} className="pillicon" alt="MagicMeds Logo" /></a>
                                 </div>
+                                    
                                 <div>
                                     <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>An Automatic Pill Dispenser</b></span>
                                 </div>
@@ -49,9 +50,9 @@ function Projects() {
                         <div style={{ float: 'left' }}>
                             <div class="onlysocks">
                                 <div style={{ marginTop: '15px' }}>
-                                    <div>
-                                        <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>OnlySocks</b> </span>
-                                        <img src={sock} style={{ width: '10vh', marginRight: '10px', float: 'right' }} alt="OnlySock Logo" />
+                                    <div className= "pop">
+                                        <a className="themedname" href="https://github.com/Steven7926/OnlySocks" target="_blank"><b>OnlySocks</b> </a>
+                                        <a href="https://github.com/Steven7926/OnlySocks" target="_blank"> <img src={sock} style={{ width: '10vh', marginRight: '10px', float: 'right' }} alt="OnlySock Logo" /></a>
                                     </div>
                                     <div>
                                         <span style={{ fontSize: '28px', marginLeft: '10vh' }}><b>A social media platform for socks</b></span>
@@ -84,8 +85,8 @@ function Projects() {
                     <div className="contactmanager">
                         <div style={{ overflow: 'hidden', marginTop: '15px' }}>
                             <div style={{ float: 'left'}}>
-                                <div>
-                                    <span style={{ fontSize: '40px', marginLeft: '40px' }}><b>Conatct Manager</b> </span>
+                                <div className="pop">
+                                    <a className="themedname" href="https://github.com/Steven7926/ContactManager" target="_blank"><b>Conatct Manager</b> </a>
                                 </div>
                                 <div>
                                     <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>A simple contact manager</b></span>
@@ -109,8 +110,8 @@ function Projects() {
                                 <br />
                             </div>
                             <div style={{ marginRight: '5vh', float: "right" }}>
-                                <div>
-                                    <span style={{ fontSize: '40px', marginLeft: '0px' }}><b>Event Manager</b> </span>
+                                <div className="pop">
+                                    <a className="themedname" href="https://github.com/Steven7926/EventManager/tree/Final" target="_blank"><b>Event Manager</b> </a>
                                 </div>
                                 <div>
                                     <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>A simple event manager.</b></span>

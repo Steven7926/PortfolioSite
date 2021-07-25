@@ -282,16 +282,17 @@
     font-size: 40px;
     color: white;
     text-decoration: none;
-    transition: 0.4s;
-}
-
-.tphead:hover {
-   transition: 0.4s;
-   transform: scale(1.15);
 }
 
 .pushleft {
     margin-left: 40px;
+    transition: 0.4s;
+}
+
+.pushleft:hover {
+    margin-left: 60px;
+    transform: scale(1.05);
+    transition: 0.4s;
 }
 
 .workexp {
@@ -325,7 +326,19 @@
 
 .univ {
     font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.uniname {
     margin-left: 40px;
+    transition: 0.4s;
+}
+
+.uniname:hover {
+    margin-left: 60px;
+    transform: scale(1.05);
+    transition: 0.4s;
 }
 
 .timeatuni {
@@ -373,6 +386,29 @@
     margin-bottom: 79px;
 }
 
+.themedname {
+    font-size: 40px;
+    margin-left: 40px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.pop {
+    transition: 0.4s;
+}
+
+.pop:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.pillicon {
+    width: 10vh;
+    margin-right: 50px;
+    float: right;
+}
+
 .ACMLead {
     margin-right: -5vh;
     float: right;
@@ -399,6 +435,8 @@
     font-style: oblique;
     font-weight: bold;
     text-align: center;
+    float: left;
+    margin-left: 80vh;
 }
 
 

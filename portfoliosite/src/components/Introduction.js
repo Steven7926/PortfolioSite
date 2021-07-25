@@ -59,7 +59,7 @@ function Introduction() {
                         </div>
                     </div>
                     <div className = "steven">
-                        <img src={steven} alt="Steven" />
+                        <img src={steven} alt="Sneaking around are we?" />
                     </div>
                 </div>
             </div>
