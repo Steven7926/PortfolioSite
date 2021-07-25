@@ -64,7 +64,7 @@ function Projects() {
                                         <img src={onlysocks} className = "thesockapp" alt="OnlySocks App" />
                                         <br />
                                     </div>
-                                    <div style={{ marginRight: '5vh', float: 'right' }}>
+                                    <div style={{ marginRight: '7vh', float: 'right' }}>
                                             <br />
                                             <ul>
                                                 <li><span>MERN stack based mobile/web app <br />mimicking social media apps but <br />users can only post about socks.</span></li>
@@ -114,7 +114,7 @@ function Projects() {
                                     <a className="themedname" href="https://github.com/Steven7926/EventManager/tree/Final" target="_blank"><b>Event Manager</b> </a>
                                 </div>
                                 <div>
-                                    <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>A simple event manager.</b></span>
+                                    <span style={{ fontSize: '30px', marginLeft: '15vh' }}><b>A simple event manager</b></span>
                                 </div>
                                 <div style={{ marginLeft: '5vh', float: 'left' }}>
                                         <br />
