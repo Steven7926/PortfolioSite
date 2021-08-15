@@ -76,7 +76,7 @@ function Leadership() {
                                 </div>
                                 <div style={{ float: 'left' }}>
                                         <br />
-                                        <img src={magicmedsapp} style={{ width: '22vh', marginLeft: '170px', float: 'right', borderRadius: '5px' }} alt="MagicMeds App" />
+                                        <img src={magicmedsapp} style={{ width: '22vh', marginLeft: '170px', float: 'right', borderRadius: '5px', marginRight: '23px' }} alt="MagicMeds App" />
                                         <br />
                                 </div>
                             </div>

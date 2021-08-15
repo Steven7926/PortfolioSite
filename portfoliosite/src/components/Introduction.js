@@ -5,10 +5,12 @@ import { faFile, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Fade, Bounce } from "react-reveal";
 import steven from '../assets/stevenphoto.jpg';
 import Typing from 'react-typing-animation';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Introduction() {
     return (
+
         <Fade bottom duration={2000} distance="40px">
             <div className="head">
                 <div style={{overflow: 'hidden', marginRight: '40px'}}>
