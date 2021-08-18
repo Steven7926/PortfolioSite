@@ -40,12 +40,12 @@ function Introduction() {
                                     <FontAwesomeIcon icon={faLinkedin} style={{ color: '#0E76A8' }} size="2x" transform="down-3" />
                                 </button>
                             </a>
-                            <a style={{ textDecoration: 'none'}} href="https://www.instagram.com/steven9926/" target="_blank">
+                            {/* <a style={{ textDecoration: 'none'}} href="https://www.instagram.com/steven9926/" target="_blank">
                                 <button className="socialbut grad">
                                     <span style={{ color: 'white' }} className='buttonText'><b>Instagram</b> </span>
                                         <FontAwesomeIcon icon={faInstagram} style={{ color: 'white' }} size="2x" transform="down-3 " />
                                 </button>
-                            </a>
+                            </a>*/}
                             <a style={{ textDecoration: 'none' }} href="https://stevenhudson.herokuapp.com/">
                                 <button className="socialbut" style={{ backgroundColor: '#77DD77' }}>                                   
                                     <span style={{ color: 'white' }} className='buttonText'><b>Portfolio </b></span>
