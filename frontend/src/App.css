@@ -1,0 +1,19 @@
+
+.AppPage {
+    background-color: #566E57;
+    display: flex;
+    padding-left: 0px;
+    font-size: calc(10px + 1vmin);
+    color: white;
+    width: fit-content;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#root {
+    background-color: #566E57;
+}
+
+
