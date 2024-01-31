@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
 import { Bounce } from "react-reveal";
+import { TypeAnimation } from 'react-type-animation';
 
 function Header() {
     library.add(faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher)
@@ -15,11 +16,17 @@ function Header() {
     ]
 
     return (
-        <Bounce left duration={1000}>
-            <div className="">
+        <div left duration={1000}>
+            <div className="font-mono">
                 <ul className= "flex flex-row">
+                    <div className="p-2 w-1/2">
+                        <TypeAnimation
+                            sequence={[' 11001 - Steven', 1000]}
+                            cursor={false}
+                        />                          
+                    </div>
                     {headings.map((heading) => (
-                        <li className="basis-1/8 mr-4 hover:p-2 transition-all hover:bg-slate-600 hover:rounded-md">
+                        <li className="mr-4 transition-all ease-in-out hover:scale-110 p-2 duration-300 hover:bg-slate-600 hover:rounded-md">
                             <a href={"#" + heading.name.toLowerCase().replace(" ", "")}>
                                 <span className="mr-1">{heading.name}</span>
                                 <FontAwesomeIcon icon={heading.icon} />
@@ -27,9 +34,14 @@ function Header() {
                         </li>
                     ))
                     }
-                </ul>             
+                </ul>
+                <div className="px-2">
+                    <TypeAnimation
+                        sequence={['return {', 1000]}
+                    />    
+                </div>             
             </div>
-        </Bounce>
+        </div>
     );
 }
 export default Header;

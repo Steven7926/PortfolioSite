@@ -20,31 +20,34 @@ function Introduction() {
 
     return (
         <Fade bottom duration={2000} distance="40px">
-            <div className="">                     
-                <h1 className="">
-                    <TypeAnimation
-                        sequence={['Hello, Steven Here!', 1000]}
-                    />                 
-                </h1>                        
-                <p className="">
-                    I'm a Computer Engineer with a passion for hardware and software development 🤖.
-                    I'm experienced in building full stack containerized web and mobile applications 
-                    using JavaScript/TypeScript, Reactjs, Nodejs, Java, C#, SQL, MongoDB, and GO. 
-                    I also have experience in small scale embedded systems and PCB design! 🖥️
-                </p>
-                <div className = "">
-                    {buttons.map((button) => (
-                        <a style={{ textDecoration: 'none' }} href={button.href} >
-                            <button className="" style={{backgroundColor: button.bg}}>                                  
-                                <span style={{ color: 'white' }} className= 'buttonText' ><b>{button.name}</b></span>
-                                <FontAwesomeIcon icon={button.icon} size="2x" transform="down-3"/>
-                            </button>
-                        </a>
-                    ))}               
+            <div className="flex flex-row px-10 pt-8">
+                <div className="w-1/2">                     
+                    <h1 className="">
+                        Steven Hudson              
+                    </h1>                        
+                    <p className="font-mono">
+                        A Computer Engineer with a passion for hardware and software development 🤖.
+                        Experienced in building full stack containerized web and mobile applications 
+                        using JavaScript/TypeScript, Reactjs, Nodejs, Java, C#, SQL, MongoDB, and GO. 
+                        Experienced and hobbies in small scale embedded systems and PCB design. 🖥️
+                    </p>
+                    <div className = "">
+                        {buttons.map((button) => (
+                            <a href={button.href} >
+                                <button className="font-mono rounded-lg p-2 mr-2 shadow-lg hover:scale-110 transition-all ease-in-out text-md" style={{backgroundColor: button.bg}}>                                  
+                                    <span className='pr-2' ><b>{button.name}</b></span>
+                                    <FontAwesomeIcon icon={button.icon} size="1x"/>
+                                </button>
+                            </a>
+                        ))}               
+                    </div>
                 </div>
-            </div>
-            <div className = "steven">
-                <img src={steven} alt="Sneaking around are we?" />
+                <div className="flex flex-row w-1/2 justify-center">
+                    <div className = "w-1/4">
+                        <img className = "rounded shadow-lg" src={steven} alt="Sneaking around are we?" />
+                    </div>
+                </div>
+              
             </div>
         </Fade>
     );

@@ -11,14 +11,16 @@ import  "../css/Portfolio.css";
 export default class Main extends Component {
     render() {
         return (
-            <div className="m-6">
+            <div className="m-6 h-full">
                 <Header />
                 <Introduction />
                 <WorkExperience />
-                <Education />
-                <Skills />
-                <Projects />
-                <Leadership />
+                {
+                //<Education />
+                //<Skills />
+                //<Projects />
+                //<Leadership />
+                }
                 <Footer />
             </div>
         );
