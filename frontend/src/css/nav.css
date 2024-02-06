@@ -1,0 +1,102 @@
+.nav-wrapper {
+  width: 60px;
+  height: 40px;
+}
+
+.nav-menu {
+  width: 100%;
+  height: 100%;
+}
+
+.lines {
+  -moz-transition:  0.1s ease 0.2s;
+  -o-transition:  0.1s ease 0.2s;
+  -webkit-transition:  0.2s ease;
+  transition:  0.1s ease 0.2s;
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  width: 60%;
+  position: relative;
+  top: 22px;
+}
+
+/* Top line and Bottom line */
+.lines:before,
+.lines:after {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  position: absolute;
+  content: '';
+  -moz-transition: -moz-transform 0.1s ease 0s, width 0.1s ease 0.1s, top 0.1s ease 0.2s;
+  -o-transition: -o-transform 0.1s ease 0s, width 0.1s ease 0.1s, top 0.1s ease 0.2s;
+  -webkit-transition: -webkit-transform 0.1s ease, width 0.1s ease, top 0.1s ease;
+  transition: transform 0.1s ease 0s, width 0.1s ease 0.1s, top 0.1s ease 0.2s;
+}
+
+/* Sets line rotation direction based on whether nav is open or closed */
+.point-right:before,
+.point-right:after{
+  -moz-transform-origin: right;
+  -ms-transform-origin: right;
+  -webkit-transform-origin: right;
+  transform-origin: right;
+  right: 0;
+}
+
+.point-left:before,
+.point-left:after{
+  -moz-transform-origin: left;
+  -ms-transform-origin: left;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  left: 0;
+}
+
+/* Seperates lines above and below */
+.lines:before {
+  top: -10px;
+}
+
+.lines:after {
+  top: 10px;
+}
+
+
+/* Sets the transition properties and the speed of the line transformation */
+.nav-open:hover .lines {
+  -moz-transition:  0.1s ease 0s;
+  -o-transition:  0.1s ease 0s;
+  -webkit-transition:  0.1s ease;
+  transition:  0.1s ease 0s;
+}
+
+.nav-open:hover .lines:before,
+.nav-open:hover .lines:after {
+  -moz-transition: top 0.1s ease 0s, width 0.1s ease 0.1s, -moz-transform 0.1s ease 0.2s;
+  -o-transition: top 0.1s ease 0s, width 0.1s ease 0.1s, -o-transform 0.1s ease 0.2s;
+  -webkit-transition: top 0.1s ease, width 0.1s ease, -webkit-transform 0.1s ease;
+  transition: top 0.1s ease 0s, width 0.1s ease 0.1s, transform 0.1s ease 0.2s;
+  top: 0;
+  width: 50%;
+}
+
+/* Denotes the rotation of the lines in the transition */
+.nav-open:hover .lines:before {
+  -moz-transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.nav-open:hover .lines:after {
+  -moz-transform: rotate3d(0, 0, 1, -45deg);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
+}

@@ -2,12 +2,11 @@ import React from "react";
 function Footer() {
 
     return (
-        <div id="footer" className="head">
-            <div>
-                <span>&#125;</span>
-            </div>
-            <div>
-                <span style={{ fontSize: '10px' }}> Designed and Built by Me: <a href='https://github.com/Steven7926/PortfolioSite'>Github</a></span>
+        <div id="footer" className="pb-10 flex absolute bottom-0 w-full justify-center">
+            <div className="">
+                <span style={{ fontSize: '15px' }}> Designed and Built by Me: &#160;
+                    <a href='https://github.com/Steven7926/PortfolioSite' className="text-linkBlue underline">Github</a>
+                </span>
             </div>
         </div>                     
     )

@@ -1,13 +1,14 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
-import { Bounce } from "react-reveal";
-import { TypeAnimation } from 'react-type-animation';
+import { faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher, faUser } from '@fortawesome/free-solid-svg-icons'
+import '../css/nav.css'
+
 
 function Header() {
-    library.add(faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher)
+    library.add(faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher, faUser)
     let headings = [
+        {name: "Home", icon: ["fa", "user"]},
         {name: "Work Experience", icon: ["fa", "university"]}, 
         {name: "Education", icon: ["fa", "laptop-code"]}, 
         {name: "Skills", icon: ["fa", "briefcase"]}, 
@@ -15,31 +16,40 @@ function Header() {
         {name: "Leadership", icon: ["fa", "chalkboard-teacher"]},
     ]
 
+    const [isNavOpen, openNav] = useState(false)
+    const [itemSelected, selectItem] = useState('Home')
+    const [pointDir, setPointDir] = useState('point-left')
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (isNavOpen) setPointDir('point-right animate-spinRight')
+            else setPointDir('point-left animate-spinLeft')
+        }, 100)
+      }, [isNavOpen])
+
     return (
-        <div left duration={1000}>
-            <div className="font-mono">
-                <ul className= "flex flex-row">
-                    <div className="p-2 w-1/2">
-                        <TypeAnimation
-                            sequence={[' 11001 - Steven', 1000]}
-                            cursor={false}
-                        />                          
+        <div>
+            <div className="font-mono p-6">
+                <div className= "flex flex-row w-full">
+                    <div className="p-2">
+                        <span>11001 - Steven</span>                     
                     </div>
-                    {headings.map((heading) => (
-                        <li className="mr-4 transition-all ease-in-out hover:scale-110 p-2 duration-300 hover:bg-slate-600 hover:rounded-md">
-                            <a href={"#" + heading.name.toLowerCase().replace(" ", "")}>
-                                <span className="mr-1">{heading.name}</span>
-                                <FontAwesomeIcon icon={heading.icon} />
-                            </a>                
-                        </li>
-                    ))
-                    }
-                </ul>
-                <div className="px-2">
-                    <TypeAnimation
-                        sequence={['return {', 1000]}
-                    />    
-                </div>             
+                    <div className="flex flex-row ml-auto">
+                        {headings.map((heading) => (
+                            <div className= { `${isNavOpen ? "animate-fadeIn" : "animate-fadeOut invisible" } flex mr-4 transition-all ease-in-out hover:scale-110 p-2 duration-300 hover:bg-slate-600 hover:rounded-md`}>
+                                <a href={"#" + heading.name.toLowerCase().replace(" ", "")}>
+                                    <span className={`${itemSelected === heading.name ? 'text-gold' : 'text-darkGrey dark:text-white'} mr-2`}>{heading.name}</span>
+                                    <FontAwesomeIcon icon={heading.icon} color={itemSelected === heading.name ? "#CABF85" : "#FFFFFF"}/>
+                                </a>                
+                            </div>
+                        ))}                               
+                        <button className = 'ml-4 nav-wrapper nav-open' onClick={() => openNav(prev => !prev)} data-testid = "nav-open-button">
+                            <div className="nav-menu">
+                                <span className={`${pointDir} lines bg-white before:bg-white after:bg-white dark:bg-white dark:before:bg-white dark:after:bg-white`}></span>
+                            </div>
+                        </button>
+                    </div>                
+                </div>          
             </div>
         </div>
     );
