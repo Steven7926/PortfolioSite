@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-/////////////////////////////////////////
-// Added for Heroku deployment.
 const PORT = process.env.PORT || 5000;
 require('dotenv').config();
 
@@ -12,8 +10,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json({ limit: '8mb', extended: true }));
 
-/////////////////////////////////////////
-// Added for Heroku deployment.
 app.set('port', (process.env.PORT || 5000));
 
 // Allows cors to work with react
@@ -40,13 +36,17 @@ app.use((req, res, next) => {
 
 ///////////////////////////////////////////////////
 // For Heroku deployment
-app.use(express.static(path.join(__dirname, 'portfoliosite', 'build')));
+// app.use(express.static(path.join(__dirname, 'portfoliosite', 'build')));
 
 ///////////////////////////////////////////////////
 // For Heroku deployment
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'portfoliosite', 'build', 'index.html'))
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, 'portfoliosite', 'build', 'index.html'))
+// });
+
+app.get('/', function (req, res) {
+  res.send('<h1>Hello World from Node.js!</h1>')
+})
 
 //app.listen(5000); // start Node + Express server on port 5000
 
