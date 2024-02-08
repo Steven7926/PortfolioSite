@@ -5,7 +5,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faFile} from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import steven from '../assets/stevenphoto.jpg';
 import { TypeAnimation } from 'react-type-animation';
 
@@ -20,19 +20,19 @@ function Introduction() {
     const writtin_block = "return {" + "\n" + "  name: \"Steven Hudson\"," +
                             "\n  occupation: \"Full Stack Software Engineer\"," +
                             "\n  degree: \"BS in Computer Engineering with Mathematics Minor\"," +
-                            "\n  hobbies: [\"Soccer\", \"Fetch with my dogs\", \"Traveling\"]" +
+                            "\n  hobbies: [\"Soccer\", \"Fetch with my dogs\", \"Traveling\", \"Eating\", \"Lifting\"]" +
                             "\n }"
 
     return (
-        <Fade bottom duration={2000} distance="40px">
-            <div className="flex flex-row px-10 pt-8">
-                <div className="w-full">                     
-                    <pre>
-                        <TypeAnimation
-                            sequence={[writtin_block, 500]}
-                            speed={70}
-                        />  
-                    </pre>                      
+        <div className="flex flex-row px-10 pt-8">
+            <div className="w-full">                     
+                <pre>
+                    <TypeAnimation
+                        sequence={[writtin_block, 500]}
+                        speed={90}
+                    />  
+                </pre>
+                <Fade duration={2000} delay={2500} direction="up">                      
                     <div className = "pt-5">
                         {buttons.map((button) => (
                             <a href={button.href} >
@@ -43,9 +43,9 @@ function Introduction() {
                             </a>
                         ))}               
                     </div>
-                </div>
+                </Fade>
             </div>
-        </Fade>
+        </div>
     );
 }
 export default Introduction;

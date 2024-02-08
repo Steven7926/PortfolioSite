@@ -53,6 +53,16 @@ module.exports = {
           '50%': {transform: 'translateY(-50px)', animationtimingfunction: 'ease-in'},
           '100%': {transform: 'translateY(-300px)', animationtimingfunction: 'ease-in'}
         },
+        slideOutX: {
+          '0%': {transform: 'translateX(100px)', animationtimingfunction: 'ease-out'},
+          '50%': {transform: 'translateX(50px)', animationtimingfunction: 'ease-out'},
+          '100%': {transform: 'translateX(0px)', animationtimingfunction: 'ease-out'}
+        },
+        slideInX: {
+          '0%': {transform: 'translateX(0px)', animationtimingfunction: 'ease-in'},
+          '50%': {transform: 'translateX(50px)', animationtimingfunction: 'ease-in'},
+          '100%': {transform: 'translateX(100px)', animationtimingfunction: 'ease-in'}
+        },
         spinRight: {
           '0%': {transform: 'rotate(180deg)'},
           '100%': {transform: 'rotate(0deg)'},         
@@ -73,6 +83,8 @@ module.exports = {
         slideOutFadeOut: 'fadeOut .3s, slideOut .3s linear',
         spinRight: 'spinRight .4s',
         spinLeft: 'spinLeft .4s',
+        slideOutX: 'slideOutX .3s linear, fadeIn .3s',
+        slideInX: 'slideInX .3s linear, fadeOut .3s'
       }  
     },
 
