@@ -38,8 +38,7 @@ function Header() {
     }, [isNavOpen])
 
     function handleNav(name) {
-        if(name == "about")
-            name = ""
+        console.log(name)
         navigate(name.replace(" ", ""))
     }
     
