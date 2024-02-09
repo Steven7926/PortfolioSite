@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher, faUser } from '@fortawesome/free-solid-svg-icons'
 import '../css/nav.css'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation} from 'react-router-dom'
 
 
 function Header() {
@@ -17,6 +17,7 @@ function Header() {
     ]
 
     const navigate = useNavigate();
+    const location = useLocation();
     const [isNavOpen, openNav] = useState(false)
     const hasPageRendered = useRef(false)
     const [itemSelected, selectItem] = useState('About')
@@ -52,7 +53,7 @@ function Header() {
                         <span>11001 - Steven</span>                     
                     </div>
                     <div className="flex ml-auto phone:static absolute right-0">
-                        <div className= { `${isNavOpen ? "animate-slideOutX" : `animate-slideInX ${hideOps}` } phone:bg-transparent bg-lightGrey rounded-lg phone:shadow-none shadow-md flex phone:flex-row flex-col transition-transform duration-300`}>
+                        <div className= { `${isNavOpen ? "animate-slideOutX" : `animate-slideInX ${hideOps}` } z-10 phone:bg-transparent bg-lightGrey rounded-lg phone:shadow-none shadow-md flex phone:flex-row flex-col transition-transform duration-300`}>
                             {headings.map((heading) => (
                                     <button className="phone:p-2 px-3 py-2 hover:scale-110 transition-transform" 
                                             onClick={() => {
@@ -66,7 +67,7 @@ function Header() {
                                                    
                             ))}
                         </div>                         
-                        <button className = 'ml-4 nav-wrapper nav-open' onClick={() => openNav(prev => !prev)} data-testid = "nav-open-button">
+                        <button className = 'ml-4 nav-wrapper nav-open' onBlur={() => openNav(prev => !prev)} onClick={() => openNav(prev => !prev)} data-testid = "nav-open-button">
                             <div className="nav-menu">
                                 <span className={`${pointDir} lines bg-white before:bg-white after:bg-white dark:bg-white dark:before:bg-white dark:after:bg-white`}></span>
                             </div>
