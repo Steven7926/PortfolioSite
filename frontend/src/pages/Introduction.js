@@ -15,7 +15,7 @@ function Introduction() {
     let buttons = [
         {name: "Github", icon: ["fab", "github"], href: "https://github.com/Steven7926", bg: 'darkgrey'}, 
         {name: "Linkedin", icon: ["fab", "linkedin"], href: "https://www.linkedin.com/in/steven-hudson-42a79714b", bg: '#78A2CC'}, 
-        {name: "Resume", icon: ["fa", "file"], href: "https://drive.google.com/file/d/1cQPeCJChBcjQn9pUvEDw5oKSBmeU5bBu/view?usp=sharing", bg: '#B19CD9'}
+        {name: "Resume", icon: ["fa", "file"], href: "https://github.com/Steven7926", bg: '#B19CD9'}
     ]
     const writtin_block = "return {" + "\n" + "  name: \"Steven Hudson\"," +
                             "\n  occupation: \"Full Stack Software Engineer\"," +
