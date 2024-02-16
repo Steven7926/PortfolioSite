@@ -29,10 +29,10 @@ function Introduction() {
                 <pre className="text-wrap">
                     <TypeAnimation
                         sequence={[writtin_block, 500]}
-                        speed={90}
+                        speed={92}
                     />  
                 </pre>
-                <Fade duration={2000} delay={2500} direction="up">                      
+                <Fade duration={1500} delay={2100} direction="up">                      
                     <div className = "pt-5">
                         {buttons.map((button) => (
                             <a href={button.href} >
