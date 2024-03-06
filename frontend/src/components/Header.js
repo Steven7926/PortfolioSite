@@ -10,9 +10,9 @@ function Header() {
     library.add(faUniversity, faLaptopCode, faBriefcase, faProjectDiagram, faChalkboardTeacher, faUser)
     let headings = [
         {name: "About", icon: ["fa", "user"], select: "about"},
-        {name: "Work Experience", icon: ["fa", "university"], select: "workexperience"}, 
-        {name: "Education", icon: ["fa", "laptop-code"], select: "education"}, 
-        {name: "Skills", icon: ["fa", "briefcase"], select: "skills"}, 
+        {name: "Work", icon: ["fa", "briefcase"], select: "work"}, 
+        {name: "Education", icon: ["fa", "university"], select: "education"}, 
+        {name: "Skills", icon: ["fa", "laptop-code"], select: "skills"}, 
         {name: "Projects", icon: ["fa", "project-diagram"], select: "projects"},
     ]
 
@@ -46,35 +46,6 @@ function Header() {
             name = ""
         navigate(name.replace(" ", ""))
     }
-
-    // function checkNavType() {
-    //     let isStatic = false
-    //     let elem = document.getElementById('navigation')
-    //     let win = document.defaultView || window, style
-
-    //     if (win.getComputedStyle) { // Modern Browsers
-    //         style = win.getComputedStyle(elem, '');
-    //         for (var i=0; i<style.length; i++) {
-    //             if (style[i] == "position" && style.getPropertyValue(style[i]) == "static")
-    //                 isStatic = true
-    //         }
-    //     }
-    //     // else if (elem.currentStyle) {  //Internet Explorer
-    //     //     style = elem.currentStyle;
-    //     //     for (var name in style) {
-    //     //         if (name == "position" && style[name] == "static")
-    //     //             isStatic = true
-    //     //     }
-    //     // } 
-    //     // else {   // Older Browsers
-    //     //     style = elem.style;
-    //     //     for (var i=0; i<style.length; i++) {
-    //     //         if (style[i] == "position" && style[style[i]] == "static")
-    //     //             isStatic = true
-    //     //     }
-    //     // }
-    //     return isStatic;
-    // }
     
     
     return (

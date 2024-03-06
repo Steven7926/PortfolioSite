@@ -8,71 +8,54 @@ import fam from '../assets/fam.jpg';
 
 function Education() {
     return (
-        <div>
-            <div id="education" className = "head projectstop">
-                <Fade bottom duration={2000} distance="40px">
-                    <div>
-                        <div>
-                            <span className = "edu" ><b>Education </b></span>
-                            <FontAwesomeIcon icon={faUniversity} size='3x' style={{ marginLeft: '5px' }} />
+        <div id="education">
+            <Fade bottom duration={2000} distance="40px">
+                <div className='px-8'>
+                    <div className='flex justify-center items-center'>
+                        <span className='pt-4 px-2'>Education</span>
+                        <FontAwesomeIcon icon={faUniversity} size='2x' />
+                    </div>
+                    <div className='flex flex-col'>                        
+                        <div className='flex justify-center items-center'>
+                            <a href="https://ucf.edu"><b>University of Central Florida</b> </a>
                         </div>
-                        <div> 
-                            <div className="ucf">
-                                <div style={{ overflow: 'hidden', marginTop: '15px' }}>
-                                    <div className = "uniname">
-                                        <a className="univ" href="https://ucf.edu"><b>University of Central Florida</b> </a>
+                        <div className='flex justify-center items-center'>
+                            <span><b>Fall 2017 - Spring 2021</b></span>
+                        </div>
+                        <div className='flex flex-row justify-center items-center'>
+                            <img className= 'w-1/6' src={ucf} alt="UCF Logo" />
+                            <div>
+                                    <div>
+                                        <span> Major: Computer Engineering </span>
                                     </div>
-                                    <div style={{ float: 'left' }}>
-                                        <span className = "timeatuni"><b>Fall 2017 - Spring 2021</b></span>
+                                    <div>
+                                        <span> Minor: Mathematics </span>
                                     </div>
-                                </div>
-                                <div style={{ overflow: 'hidden' }}>
-                                    <div style={{ float: 'left'}}>
-                                        <img src={ucf} className = "theucflogo" alt="UCF Logo" />
+                                    <div>
+                                        <span> Degree Received: Bachelors of Science</span>
                                     </div>
-                                    <div className = "majortext">                               
-                                            <br />
-                                            <div className = "detailsucf">
-                                                <div>
-                                                    <span> Major: Computer Engineering </span>
-                                                </div>
-                                                <div>
-                                                    <span> Minor: Mathematics </span>
-                                                </div>
-                                                <div>
-                                                    <span> Degree Received: Bachelors</span>
-                                                </div>
-                                                <div>
-                                                    <span> GPA: 3.2 </span>
-                                                </div>
-                                            </div>
-                                            <div className="detailsucf">
-
-                                                <div>
-                                                    <span> Took courses in the following:</span>
-                                                    <div className = "courses">
-                                                        <li>Computer Architecture</li>
-                                                        <li>Data Structures</li>
-                                                        <li>Embedded Systems</li>
-                                                        <li>Software Design</li>
-                                                        <li>Circuit Theory</li>
-                                                        <li>Mathematics</li>
-                                                        <li>Physics</li>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <br />
+                                    <div>
+                                        <span> GPA: 3.2 </span>
                                     </div>
-                                </div>
+                                    <span> Took courses in the following:</span>
+                                    <div>
+                                            <li>Computer Architecture</li>
+                                            <li>Data Structures</li>
+                                            <li>Embedded Systems</li>
+                                            <li>Software Design</li>
+                                            <li>Circuit Theory</li>
+                                            <li>Mathematics</li>
+                                            <li>Physics</li>
+                                    </div>
                             </div>
-                            <div style={{ float: 'left' }}>
-                                <img src={fam} style={{ width: '50vh', borderRadius: '10px', marginLeft: '10vh', marginTop: '2vh' }} alt="Family" />
-                                <p className = 'caption' > Me and my family on graduation day!</p>
-                            </div>
+                        </div>
+                        <div className='flex flex-col justify-center items-center'>
+                            <img src={fam} className = 'w-1/6' alt="Family" />
+                            <p> Me and my family on graduation day!</p>
                         </div>
                     </div>
-                </Fade>
-            </div>
+                </div>
+            </Fade>
         </div>
     );
 }

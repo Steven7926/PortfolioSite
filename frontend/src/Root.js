@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import Intro from "./pages/Introduction";
 import Footer from "./components/Footer";
 import { Outlet } from "react-router-dom";
 

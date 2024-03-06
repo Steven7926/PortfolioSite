@@ -6,7 +6,6 @@ import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faFile} from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { Fade } from "react-awesome-reveal";
-import steven from '../assets/stevenphoto.jpg';
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -18,15 +17,16 @@ function Introduction() {
         {name: "Resume", icon: ["fa", "file"], href: "https://github.com/Steven7926", bg: '#B19CD9'}
     ]
     const writtin_block = "return {" + "\n" + "  name: \"Steven Hudson\"," +
-                            "\n  occupation: \"Full Stack Software Engineer\"," +
-                            "\n  degree: \"BS in Computer Engineering with Mathematics Minor\"," +
-                            "\n  hobbies: [\"Soccer\", \"Fetch with my dogs\", \"Traveling\", \"Eating\", \"Lifting\"]" +
-                            "\n }"
+                            "\n  occupation: \"Full Stack Engineer\"," +
+                            "\n  degree: \"BS in Computer Engineering\"," +
+                            "\n  degree_minor: \"Mathematics\"," +
+                            "\n  hobbies: [\"Soccer\", \"Travel\", \"Eating\"]" +
+                            "\n}"
 
     return (
         <div className="flex flex-row phone:px-10 px-6 pt-6">
-            <div className="w-full">                     
-                <pre className="text-wrap">
+            <div>                     
+                <pre>
                     <TypeAnimation
                         sequence={[writtin_block, 500]}
                         speed={92}
