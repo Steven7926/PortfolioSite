@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import magicmeds from '../assets/magicmeds.png';
 import sock from '../assets/sock.png';
 import onlysocks from '../assets/OnlySocks.jpg';

@@ -1,9 +1,8 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import ProgressBar from "@ramonak/react-progress-bar";
 import { faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { faNode, faJsSquare, faHtml5, faCss3Alt, faBootstrap, faNpm, faMicrosoft, faAws, faVuejs, faAngular, faJava, faPython, faErlang, faReact, faPhp } from '@fortawesome/free-brands-svg-icons';
-import { Fade } from "react-reveal";
+import { Fade } from "react-awesome-reveal";
 import express from '../assets/expressjs.png';
 import jquery from '../assets/jquery.png';
 import mongodb from '../assets/mongodb.png';
@@ -15,7 +14,6 @@ import haskell from '../assets/haskell.png';
 function Skills() {
     return (
         <div id="skills" className = "head projectstop">
-            <Fade bottom duration={2000} distance="40px">
                 <div>
                     <div>
                         <span style={{ fontSize: '50px', marginLeft: '5px' }}><b>Skills </b></span>
@@ -143,86 +141,7 @@ function Skills() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="">
-                        <div style={{ float: 'left' }}>
-                            <b>Confidence with Languages</b>
-                            <br />
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>JavaScript: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={95} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>SQL: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={90} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>Java: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={90} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>C: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={85} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>Python: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={85} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>C#: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={80} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>PHP: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={70} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>Erlang: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={60} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>MIPS32: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={60} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>C++: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={40} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>Haskell: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={40} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                            <div style={{ overflow: 'hidden' }}>
-                                <span style={{ float: 'left' }}><b>Verilog: </b></span>
-                                <div style={{ marginLeft: '12vh' }}>
-                                    <ProgressBar completed={30} width={900} isLabelVisible={false} style={{ marginLeft: '5vh' }} />
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
-            </Fade>
         </div>
     );
 }

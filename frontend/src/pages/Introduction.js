@@ -29,10 +29,10 @@ function Introduction() {
                 <pre>
                     <TypeAnimation
                         sequence={[writtin_block, 500]}
-                        speed={92}
+                        speed={90}
                     />  
                 </pre>
-                <Fade duration={1500} delay={2100} direction="up">                      
+                <Fade duration={1000} delay={2300} direction="up">                      
                     <div className = "pt-5">
                         {buttons.map((button) => (
                             <a href={button.href} >

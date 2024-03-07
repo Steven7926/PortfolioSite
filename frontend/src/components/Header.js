@@ -47,38 +47,36 @@ function Header() {
         navigate(name.replace(" ", ""))
     }
     
-    
     return (
-        <div>
-            <div className="font-mono phone:p-6 p-4">
-                <div className= "flex flex-row">
-                    <div className="p-2">
-                        <span>11001 - Steven</span>                     
-                    </div>
-                    <div id = "navigation" className="flex ml-auto phone:static absolute right-0" key="nav">
-                        <div className= { `${isNavOpen ? "animate-slideOutX" : `animate-slideInX ${hideOps}` } z-10 phone:bg-transparent bg-lightGrey rounded-lg phone:shadow-none shadow-md flex phone:flex-row flex-col transition-transform duration-300`}>
-                            {headings.map((heading) => (
-                                    <button key={heading.select} className="phone:p-2 px-3 py-2 hover:scale-110 transition-transform" 
-                                            onClick={() => {
-                                                selectItem(heading.select)
-                                                handleNav(heading.name.toLowerCase())
-                                            }}
-                                    >
-                                        <FontAwesomeIcon className = 'mr-1' icon={heading.icon} color={itemSelected === heading.select ? "#CABF85" : "#FFFFFF"}/>
-                                        <span className={`${itemSelected === heading.select ? 'text-gold' : 'text-darkGrey dark:text-white'} mr-2`}>{heading.name}</span>        
-                                    </button>                
-                                                   
-                            ))}
-                        </div>                         
-                        <button className = 'ml-4 nav-wrapper nav-open' onBlur={() => openNav(prev => !prev)} onClick={() => openNav(prev => !prev)} data-testid = "nav-open-button">
-                            <div className="nav-menu">
-                                <span className={`${pointDir} lines bg-white before:bg-white after:bg-white dark:bg-white dark:before:bg-white dark:after:bg-white`}></span>
-                            </div>
-                        </button>
-                    </div>                
-                </div>          
-            </div>
+        <div className="font-mono phone:p-6 p-4">
+            <div className= "flex flex-row">
+                <div className="p-2">
+                    <span>11001 - Steven</span>                     
+                </div>
+                <div id = "navigation" className="flex ml-auto phone:static absolute right-0" key="nav">
+                    <div className= { `${isNavOpen ? "animate-slideOutX" : `animate-slideInX ${hideOps}` } z-10 phone:bg-transparent bg-lightGrey rounded-lg phone:shadow-none shadow-md flex phone:flex-row flex-col transition-transform duration-300`}>
+                        {headings.map((heading) => (
+                                <button key={heading.select} className="phone:p-2 px-3 py-2 hover:scale-110 transition-transform" 
+                                        onClick={() => {
+                                            selectItem(heading.select)
+                                            handleNav(heading.name.toLowerCase())
+                                        }}
+                                >
+                                    <FontAwesomeIcon className = 'mr-1' icon={heading.icon} color={itemSelected === heading.select ? "#CABF85" : "#FFFFFF"}/>
+                                    <span className={`${itemSelected === heading.select ? 'text-gold' : 'text-darkGrey dark:text-white'} mr-2`}>{heading.name}</span>        
+                                </button>                
+                                                
+                        ))}
+                    </div>                         
+                    <button className = 'ml-4 nav-wrapper nav-open' onBlur={() => openNav(prev => !prev)} onClick={() => openNav(prev => !prev)} data-testid = "nav-open-button">
+                        <div className="nav-menu">
+                            <span className={`${pointDir} lines bg-white before:bg-white after:bg-white dark:bg-white dark:before:bg-white dark:after:bg-white`}></span>
+                        </div>
+                    </button>
+                </div>                
+            </div>          
         </div>
+
     );
 }
 export default Header;
