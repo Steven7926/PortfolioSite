@@ -3,20 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
 import { Fade } from "react-awesome-reveal";
 import theraplan from '../assets/TheraplanLogo.png';
-import iex from '../assets/IEX.svg';
+import iex from '../assets/svgs/IEX.svg';
 
 
 function WorkExperience() {
     return (
         <div className='flex-col p-6' id="workexperience">
-            <Fade direction="up" duration={1000} delay={0}>            
+            <Fade direction="up" duration={1000} delay={0} triggerOnce={true}>            
                 <div className="pb-2 flex flex-row justify-center items-center">
                     <span className = "pr-3">Work</span>
                     <FontAwesomeIcon icon={faBriefcase} size='2x' className=""/>
                 </div>
             </Fade>
             <div>
-                <Fade direction="up" duration={1000} delay={500} cascade>
+                <Fade direction="up" duration={1000} delay={500} cascade fraction={0} damping={0.2} triggerOnce={true}>
                     <div className="flex flex-col justify-center items-center">
                         <div className="bg-black rounded-lg shadow-lg font-mono phone:w-3/4">
                             <div className = "flex flex-row phone:px-10 phone:py-5 px-1 py-1">

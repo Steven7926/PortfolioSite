@@ -1,147 +1,121 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLaptopCode, faDatabase } from '@fortawesome/free-solid-svg-icons'
-import { faNode, faJsSquare, faHtml5, faCss3Alt, faBootstrap, faNpm, faMicrosoft, faAws, faVuejs, faAngular, faJava, faPython, faErlang, faReact, faPhp } from '@fortawesome/free-brands-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faLaptopCode, faDatabase, faBook, faCode, faToolbox } from '@fortawesome/free-solid-svg-icons';
+import { faNode, faHtml5, faCss3Alt, faBootstrap, faNpm, faMicrosoft, faAws, 
+         faAngular, faJava, faPython, faErlang, faReact, faPhp, faWordpress, 
+         faGithub, faYarn, faJenkins, faGolang, faDocker, faJs} from '@fortawesome/free-brands-svg-icons';
 import { Fade } from "react-awesome-reveal";
-import express from '../assets/expressjs.png';
-import jquery from '../assets/jquery.png';
-import mongodb from '../assets/mongodb.png';
-import C from '../assets/C.png';
-import Cplus from '../assets/c++.png';
-import Csharp from '../assets/C-Sharp.png';
-import haskell from '../assets/haskell.png';
+// import jquery from '../assets/jquery.png';
+import flutter from '../assets/svgs/flutter.svg';
+import cLang from '../assets/svgs/c.svg';
+import cSharp from '../assets/svgs/c-sharp.svg';
+import cPlus from '../assets/svgs/cplusplus.svg';
+import typescript from '../assets/svgs/typescript.svg';
+import haskell from '../assets/svgs/haskell.svg';
+import kubernetes from '../assets/svgs/kubernetes.svg';
+import css from '../assets/svgs/css.svg';
+import vscode from '../assets/svgs/vscode.svg';
+import mongodb from '../assets/svgs/mongodb.svg';
+import express from '../assets/svgs/express.svg';
+import jquery from '../assets/svgs/jquery.svg';
 
 function Skills() {
+
+    library.add(faGolang, faNode, faJs, faHtml5, faCss3Alt, faBootstrap, faNpm, faMicrosoft, faAws, faAngular, faJava, 
+                faPython, faErlang, faReact, faPhp, faDocker, faWordpress, faGithub, faYarn, faJenkins, faDatabase)
+    let libraries = [
+        {name: "Node", icon: ["fab", "node"], ref: "https://nodejs.org/en/about"},
+        {name: "Bootstrap", icon: ["fab", "bootstrap"], ref: "https://getbootstrap.com/"},
+        {name: "NPM", icon: ["fab", "npm"], ref: "https://www.npmjs.com/"},
+        {name: "Angular", icon: ["fab", "angular"], ref: "https://angular.io/"},     
+        {name: "React", icon: ["fab", "react"], ref: "https://react.dev/"},
+        {name: "React Native", icon: ["fab", "react"], ref: " https://reactnative.dev/"},     
+        {name: "Flutter", icon: [flutter], ref: "https://flutter.dev/"},
+        {name: "Yarn", icon: ["fab", "yarn"], ref: "https://yarnpkg.com/"},
+        {name: "Express", icon: [express], ref: "https://expressjs.com/"},
+        {name: "jQuery", icon: [jquery], ref: "https://jquery.com/"},
+    ]
+
+    let programmingMarkup = [
+        {name: "JavaScript", icon: ["fab", "js"], ref: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"},
+        {name: "TypeScript", icon: [typescript], ref: "https://www.typescriptlang.org/"},  
+        {name: "HTML", icon: ["fab", "html5"], ref: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"}, 
+        {name: "CSS", icon: [css], ref: "https://developer.mozilla.org/en-US/docs/Web/CSS"},
+        {name: "Java", icon: ["fab", "java"], ref: "https://www.java.com/en/"},
+        {name: "Python", icon: ["fab", "python"], ref: "https://www.python.org/"},
+        {name: "Erlang", icon: ["fab", "erlang"], ref: "https://www.erlang.org/"},
+        {name: "Haskell", icon: [haskell], ref: "https://www.haskell.org/"},
+        {name: "PHP", icon: ["fab", "php"], ref: "https://www.php.net/"},
+        {name: "GoLang", icon: ["fab", "golang"], ref: "https://go.dev/"},
+        {name: "SQL", icon: ["fa", "database"], ref: "https://aws.amazon.com/what-is/sql/"},
+        {name: "C", icon: [cLang], ref: "https://go.dev/"},
+        {name: "C#", icon: [cSharp], ref: "https://learn.microsoft.com/en-us/dotnet/csharp/"},
+        {name: "C++", icon: [cPlus], ref: "https://cplusplus.com/doc/tutorial/"},
+    ]
+
+    let toolsTech = [
+        {name: "Azure", icon: ["fab", "microsoft"], ref: "https://azure.microsoft.com/en-us/products/devops"},
+        {name: "AWS", icon: ["fab", "aws"], ref: "https://aws.amazon.com/"},
+        {name: "Github", icon: ["fab", "github"], ref: "https://github.com/"},
+        {name: "Docker", icon: ["fab", "docker"], ref: "https://www.docker.com/"},
+        {name: "Kubernetes", icon: [kubernetes], ref: "https://kubernetes.io/"},
+        {name: "Jenkins", icon: ["fab", "jenkins"], ref: "https://www.jenkins.io/"},
+        {name: "MongoDB", icon: [mongodb], ref: "https://www.mongodb.com/"},
+        {name: "VSCode", icon: [vscode], ref: "https://code.visualstudio.com/"},
+        {name: "Wordpress", icon: ["fab", "wordpress"], ref: "https://wordpress.org/"},
+    ]
+
     return (
-        <div id="skills" className = "head projectstop">
-                <div>
-                    <div>
-                        <span style={{ fontSize: '50px', marginLeft: '5px' }}><b>Skills </b></span>
-                        <FontAwesomeIcon icon={faLaptopCode} size='3x' style={{ marginLeft: '5px' }} />
-                    </div>
-                    <div style={{ marginTop: '15px' }}>
-                        <div className="skills">
-                            <div style={{ overflow: 'hidden', marginTop: '15px' }}>
-                                <div className="skillslang">
-                                    <span><b>Frameworks, Libraries, and Technologies</b></span>
-                                </div>
-                                <div style={{ overflow: 'hidden' }}>    
-                                    <div style={{ marginLeft: '60px' }}>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faBootstrap} size='3x' style={{ marginLeft: '35px' }} />
-                                            <p className="iconcap">BootStrap</p>
-                                        </div>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faNpm} size='3x' style={{ marginLeft: '15px' }} />
-                                            <p className="iconcapsm">npm</p>
-                                        </div>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faNode} size='3x' style={{ marginLeft: '30px' }} />
-                                            <p className="iconcapsm" style={{ marginLeft: '40px' }}>Node</p>
-                                        </div>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faVuejs} size='3x' style={{ marginLeft: '30px' }} />
-                                            <p className="iconcapsm" style={{ marginLeft: '40px' }}>Vue</p>
-                                        </div>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faReact} size='3x' style={{ marginLeft: '80px' }} />
-                                            <p className="iconcapsm">React/React Native</p>
-                                        </div>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faAngular} size='3x' style={{ marginLeft: '30px' }} />
-                                            <p className="iconcapsm">Angular</p>
-                                        </div>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faMicrosoft} size='3x' style={{ marginLeft: '25px' }} />
-                                            <p className="iconcapsm" style={{ marginLeft: '25px' }}>Azure</p>
-                                        </div>
-                                        <div style={{ float: 'left' }}>
-                                            <FontAwesomeIcon icon={faAws} size='3x' style={{ marginLeft: '25px' }} />
-                                            <p className="iconcapsm" style={{ marginLeft: '40px' }}>AWS</p>
-                                        </div>
-                                    </div>
-                                    <div style={{ marginLeft: '60px' }}>
-                                        <div div style={{ float: 'left', marginLeft: '15px'}}>
-                                            <img src={express} style={{ width: '15vh', borderRadius: '10px'}} alt="Express" />
-                                         </div>
-                                        <div div style={{ float: 'left', marginLeft: '9vh'  }}>
-                                            <img src={mongodb} style={{ width: '25vh'}} alt="MongoDB" />
-                                        </div>
-                                        <div div style={{ float: 'left', marginLeft: '6vh'}}>
-                                            <img src={jquery} style={{ width: '25vh' }} alt="jQuery" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div className="skillsmark" style={{ marginLeft: '5vh', marginBottom: '10px' }}>
-                            <div class= "skillslang">
-                                <span><b>Languages and Markup</b></span>
-                            </div>
-                            <div style={{ marginLeft: '40px'}}>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faHtml5} size='3x' style={{ marginLeft: '30px' }} />
-                                    <p className="iconcap" style={{ marginLeft: '20px' }}>HTML5</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faCss3Alt} size='3x' style={{ marginLeft: '40px' }} />
-                                    <p className="iconcap" style={{ marginLeft: '40px' }}>CSS3</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faJsSquare} size='3x' style={{ marginLeft: '50px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '30px' }}>JavaScript</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faDatabase} size='3x' style={{ marginLeft: '40px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '50px' }}>SQL</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faJava} size='3x' style={{ marginLeft: '40px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '40px' }}>Java</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faPython} size='3x' style={{ marginLeft: '40px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '30px' }}>Python</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faPhp} size='3x' style={{ marginLeft: '40px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '60px' }}>PHP</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faErlang} size='3x' style={{ marginLeft: '40px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '50px' }}>Erlang</p>
-                                </div>    
-                            </div>
-                            <div style={{ marginLeft: '15vh', marginTop: '186px'  }}>
-                                <div style={{ float: 'left' }}>
-                                    <img src={C} className= "cicon" alt="C" />
-                                    <p className="ccom">C</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <img src={Csharp} className="csharpicon" alt="C#" />
-                                    <p className="csharpcom">C#</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <img src={Cplus} className="cplusplusicon" alt="C++" />
-                                    <p className="cpluscom">C++</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <img src={haskell} style={{ width: '7vh', marginLeft: '5px' }} alt="haskell" />
-                                    <p className="iconcapsm" style={{ marginLeft: '5px' }}>Haskell</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faJsSquare} size='3x' style={{ marginLeft: '35px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '30px' }}>MIPS32</p>
-                                </div>
-                                <div style={{ float: 'left' }}>
-                                    <FontAwesomeIcon icon={faJsSquare} size='3x' style={{ marginLeft: '25px' }} />
-                                    <p className="iconcapsm" style={{ marginLeft: '25px' }}>Verilog</p>
-                                </div>
-                            </div>
-                        </div>
+        <div id="skills" className = "flex flex-col flex-wrap">
+            <Fade duration={1000} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
+                <div className='flex justify-center items-center'>
+                    <span className='pt-4 px-2'>Skills</span>
+                    <FontAwesomeIcon icon={faLaptopCode} size='2x' />
+                </div>
+                <div className='flex flex-col justify-center items-center bg-blackClear rounded-md mt-5'>
+                    <div className = 'flex flex-row mt-5'>
+                        <span className='pt-4 px-2'>Frameworks and Libraries </span>
+                        <FontAwesomeIcon icon={faBook} size='2x' />
+                    </div> 
+                    <div className = 'flex flex-row justify-center items-center flex-wrap mt-5'>
+                        {libraries.map((lib) => (            
+                            <a href = {lib.ref} className='flex flex-col justify-center items-center m-5 hover:scale-110 transition-transform'>    
+                                {lib.icon.length > 1 ? <FontAwesomeIcon icon={lib.icon} size='2x' /> : <img src={lib.icon[0]}/>}
+                                <span className=''>{lib.name}</span>
+                            </a>
+                        ))}
                     </div>
                 </div>
+                <div className='flex flex-col justify-center items-center rounded-md mt-5'>
+                    <div className = 'flex flex-row mt-5'>
+                        <span className='pt-4 px-2'>Languages and Markups </span>
+                        <FontAwesomeIcon icon={faCode} size='2x' />
+                    </div> 
+                    <div className = 'flex flex-row justify-center items-center flex-wrap mt-5'>
+                        {programmingMarkup.map((lang) => (            
+                            <a href = {lang.ref} className='flex flex-col justify-center items-center m-5 hover:scale-110 transition-transform'>    
+                                {lang.icon.length > 1 ?<FontAwesomeIcon icon={lang.icon} size='2x' /> : <img src={lang.icon[0]}/>}
+                                <span className=''>{lang.name}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+                <div className='flex flex-col justify-center items-center bg-blackClear rounded-md mt-5'>
+                    <div className = 'flex flex-row mt-5'>
+                        <span className='pt-4 px-2'>Tools and Technologies </span>
+                        <FontAwesomeIcon icon={faToolbox} size='2x' />
+                    </div> 
+                    <div className = 'flex flex-row justify-center items-center flex-wrap mt-5'>
+                        {toolsTech.map((tool) => (            
+                            <a href = {tool.ref} className='flex flex-col justify-center items-center m-5 hover:scale-110 transition-transform'>    
+                                {tool.icon.length > 1 ? <FontAwesomeIcon icon={tool.icon} size='2x' /> : <img src={tool.icon[0]}/>}
+                                <span className=''>{tool.name}</span>
+                            </a>
+                        ))}
+                    </div>
+                </div>      
+            </Fade>                     
         </div>
     );
 }
