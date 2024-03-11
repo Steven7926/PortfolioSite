@@ -13,7 +13,7 @@ function Education() {
     return (
         <div id="education" className='flex flex-col'>
             <div className='px-8'>
-                <Fade duration={1000} direction="up" triggerOnce = {true} cascade fraction={0} damping={0}>
+                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.4}>
                     <div className='flex justify-center items-center'>
                         <span className='pt-4 px-2'>Education</span>
                         <FontAwesomeIcon icon={faUniversity} size='2x' />
@@ -70,15 +70,16 @@ function Education() {
                             <li>Teach and run workshops on introduction web development material.</li>
                         </ul>
                     </div>
-
+                    </Fade>
+                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.4}>
                     <div className='flex flex-col justify-center items-center'>
                         <div className = 'flex flex-row justify-center items-center'>
-                            <a className='font-bold hover:scale-110 transition-transform' href="https://www.cecs.ucf.edu/SeniorDesignShowcase/team/magicmeds-automatic-pill-dispenser/" >Team Leader</a>
+                            <a className='font-bold hover:scale-110 transition-transform' href="https://www.cecs.ucf.edu/SeniorDesignShowcase/team/magicmeds-automatic-pill-dispenser/" >Team Lead</a>
                             <img className = 'w-3/12' src={magicmeds} alt="MagicMeds Logo" />
                         </div>
-                        <span className='font-bold'>Team Leader on Senior Design Project</span>
+                        <span className='font-bold'>Senior Design Project</span>
                     </div>
-                    <div className = 'flex phone:flex-row flex-col justify-center items-center phone:ml-10'>               
+                    <div className = 'flex phone:flex-row flex-col justify-center phone:ml-10'>               
                         <img src={magicmedsapp} className = 'phone:w-2/12 w-7/12 rounded-xl mt-4' alt="MagicMeds App" />
                         <ul className = 'p-4 phone:p-12 list-disc text-left inline-block'>                                                        
                             <li>Schedule and coordinate tasks and responsibilities to ensure deadlines were met.</li>

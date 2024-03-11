@@ -68,7 +68,7 @@ function Skills() {
 
     return (
         <div id="skills" className = "flex flex-col flex-wrap">
-            <Fade duration={1000} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
+            <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
                 <div className='flex justify-center items-center'>
                     <span className='pt-4 px-2'>Skills</span>
                     <FontAwesomeIcon icon={faLaptopCode} size='2x' />
