@@ -33,7 +33,7 @@ function Header() {
             if (isNavOpen)
                 setPointDir('point-right animate-spinRight')
             else {
-                setPointDir('point-left animate-spinLeft')
+                setPointDir('point-left animate-spinLeft')       
                 setHideOps('invisible')
             }
         }
@@ -56,10 +56,11 @@ function Header() {
                 <div id = "navigation" className="flex ml-auto phone:static absolute right-0" key="nav">
                     <div className= { `${isNavOpen ? "animate-slideOutX" : `animate-slideInX ${hideOps}` } z-10 phone:bg-transparent bg-lightGrey rounded-lg phone:shadow-none shadow-md flex phone:flex-row flex-col transition-transform duration-300`}>
                         {headings.map((heading) => (
-                                <button key={heading.select} className="phone:p-2 px-3 py-2 hover:scale-110 transition-transform" 
+                                <button key={heading.select} className="phone:p-2 px-3 py-2 hover:none phone:hover:scale-110 transition-transform" 
                                         onClick={() => {
                                             selectItem(heading.select)
                                             handleNav(heading.name.toLowerCase())
+                                            openNav(prev => !prev)
                                         }}
                                 >
                                     <FontAwesomeIcon className = 'mr-1' icon={heading.icon} color={itemSelected === heading.select ? "#CABF85" : "#FFFFFF"}/>
@@ -68,7 +69,7 @@ function Header() {
                                                 
                         ))}
                     </div>                         
-                    <button className = 'ml-4 nav-wrapper nav-open' onBlur={() => openNav(prev => !prev)} onClick={() => openNav(prev => !prev)} data-testid = "nav-open-button">
+                    <button className = 'ml-4 nav-wrapper nav-open' onClick={() => openNav(prev => !prev)} data-testid = "nav-open-button">
                         <div className="nav-menu">
                             <span className={`${pointDir} lines bg-white before:bg-white after:bg-white dark:bg-white dark:before:bg-white dark:after:bg-white`}></span>
                         </div>
