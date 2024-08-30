@@ -49,7 +49,7 @@ function Skills() {
         {name: "PHP", icon: ["fab", "php"], ref: "https://www.php.net/"},
         {name: "GoLang", icon: ["fab", "golang"], ref: "https://go.dev/"},
         {name: "SQL", icon: ["fa", "database"], ref: "https://aws.amazon.com/what-is/sql/"},
-        {name: "C", icon: [cLang], ref: "https://go.dev/"},
+        {name: "C", icon: [cLang], ref: "https://www.w3schools.com/c/c_intro.php"},
         {name: "C#", icon: [cSharp], ref: "https://learn.microsoft.com/en-us/dotnet/csharp/"},
         {name: "C++", icon: [cPlus], ref: "https://cplusplus.com/doc/tutorial/"},
     ]

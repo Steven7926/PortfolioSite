@@ -13,8 +13,7 @@ function Introduction() {
     library.add(faGithub, faLinkedin, faFile, fab)
     let buttons = [
         {name: "Github", icon: ["fab", "github"], href: "https://github.com/Steven7926", bg: 'darkgrey'}, 
-        {name: "Linkedin", icon: ["fab", "linkedin"], href: "https://www.linkedin.com/in/steven-hudson-42a79714b", bg: '#78A2CC'}, 
-        {name: "Resume", icon: ["fa", "file"], href: "https://github.com/Steven7926", bg: '#B19CD9'}
+        {name: "Linkedin", icon: ["fab", "linkedin"], href: "https://www.linkedin.com/in/steven-hudson-42a79714b", bg: '#78A2CC'}
     ]
     const writtin_block = "return {" + "\n" + "  name: \"Steven Hudson\"," +
                             "\n  occupation: \"Full Stack Engineer\"," +
