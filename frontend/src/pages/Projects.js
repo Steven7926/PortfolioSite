@@ -1,177 +1,154 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faProjectDiagram, faCalendar, faFilePdf } from '@fortawesome/free-solid-svg-icons'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import { Fade } from "react-awesome-reveal";
-import magicmeds from '../assets/magicmeds.png';
-import magicmedsapp from '../assets/MagicMedsApp.jpg';
-import sock from '../assets/sock.png';
-import onlysocks from '../assets/OnlySocks.jpg';
-import contactmanager from '../assets/ContactManager.PNG';
-import eventmanager from '../assets/EventManager.PNG';
-import steakations from '../assets/steakations.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare, faPlay } from "@fortawesome/free-solid-svg-icons";
+import Window from "../components/Window";
+import CrtImage from "../components/CrtImage";
+import Rise from "../components/Rise";
+import { PageIntro } from "../components/Prompt";
+import { archive, projects } from "../data/resume";
+
+const external = { target: "_blank", rel: "noreferrer" };
+
+function Links({ links }) {
+  if (!links.length) return <span className="text-dim text-sm">this ones just for me ;)</span>;
+  return (
+    <div className="flex flex-wrap gap-2">
+      {links.map((l) => (
+        <a key={l.href} href={l.href} className="btn !py-1 !px-2.5 text-xs" {...external}>
+          {l.label} <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-[0.65rem]" />
+        </a>
+      ))}
+    </div>
+  );
+}
+
+function Stack({ items }) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {items.map((s) => (
+        <span key={s} className="chip">
+          {s}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function Title({ p }) {
+  return (
+    <div className="flex items-center gap-3">
+      {p.icon && <img src={p.icon} alt="" className="w-8 h-8 object-contain" />}
+      <h2 className="m-0 font-display text-4xl leading-none text-gold glow-gold">{p.name}</h2>
+    </div>
+  );
+}
+
+function Video({ id, n }) {
+  return (
+    <a
+      href={`https://www.youtube.com/watch?v=${id}`}
+      {...external}
+      className="relative block"
+      aria-label={`Watch MagicMeds demo ${n} on YouTube`}
+    >
+      <CrtImage src={`https://i.ytimg.com/vi/${id}/mqdefault.jpg`} alt="" imgClassName="aspect-video" />
+      <span className="pointer-events-none absolute inset-0 z-10 grid place-items-center">
+        <span className="chip !bg-ground/80 !border-phosphor/50 !text-phosphor">
+          <FontAwesomeIcon icon={faPlay} className="text-[0.65rem]" /> demo {n}
+        </span>
+      </span>
+    </a>
+  );
+}
+
+function WideProject({ p }) {
+  return (
+    <Window title={`~/projects/${p.id}`} className="h-full">
+      <div className="grid gap-8 lg:grid-cols-2">
+        <div className="flex flex-col gap-4 min-w-0">
+          <Title p={p} />
+          <p className="m-0 text-dim">{p.tagline}</p>
+          <ul className="diff">
+            {p.bullets.map((b) => (
+              <li key={b}>{b}</li>
+            ))}
+          </ul>
+          <Stack items={p.stack} />
+          <div className="mt-auto pt-2">
+            <Links links={p.links} />
+          </div>
+        </div>
+        <div className="flex gap-4 min-w-0">
+          <CrtImage src={p.image.src} alt={p.image.alt} className="w-28 phone:w-36 shrink-0 self-start" imgClassName="aspect-[1/2] object-top" />
+          <div className="grid gap-3 content-start flex-1 min-w-0">
+            {p.videos.map((id, i) => (
+              <Video key={id} id={id} n={i + 1} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </Window>
+  );
+}
+
+function Project({ p }) {
+  const portrait = p.image?.portrait;
+  return (
+    <Window title={`~/projects/${p.id}`} className="h-full flex flex-col" bodyClassName="p-4 phone:p-6 flex-1 flex flex-col gap-4">
+      <Title p={p} />
+      <p className="m-0 text-dim">{p.tagline}</p>
+      {p.image && !portrait && (
+        <CrtImage src={p.image.src} alt={p.image.alt} imgClassName="aspect-[16/9] object-top" />
+      )}
+      <div className="flex gap-4">
+        {portrait && (
+          <CrtImage src={p.image.src} alt={p.image.alt} className="w-24 phone:w-28 shrink-0 self-start" imgClassName="aspect-[1/2] object-top" />
+        )}
+        <ul className="diff min-w-0">
+          {p.bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+      </div>
+      <Stack items={p.stack} />
+      <div className="mt-auto pt-2">
+        <Links links={p.links} />
+      </div>
+    </Window>
+  );
+}
 
 function Projects() {
-    return (
-        <div id="projects" className='flex flex-col flex-wrap'>
-            <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
-                <div className='flex justify-center items-center mb-5'>
-                    <span className='pt-4 px-2'>Projects</span>
-                    <FontAwesomeIcon icon={faProjectDiagram} size='2x' />
-                </div>
-            </Fade>
-            <div className = 'flex flex-col justify-center items-center bg-blackClear rounded-md'>
-                <Fade duration={800} delay={1000} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
-                    <a target="_blank" className='hover:scale-110 transition-transform flex flex-row justify-center items-center mt-5' href="https://github.com/Steven7926/PillDispenserMobile" >
-                        <span className='font-bold '>MagicMeds</span>
-                        <img className='h-4/12 w-4/12' src={magicmeds} alt="MagicMeds Logo" />
-                    </a>
-                    <div className='flex flex-row justify-center items-center'>
-                        <span className = 'phone:ml-0 ml-4'>An automatic pill dispenser with complete medication scheduling and caregiver abilities.</span>
-                    </div>
-                    <div className = 'flex phone:flex-row flex-col pt-3'>
-                        <FontAwesomeIcon icon={faGithub} size='2x' className='phone:pt-1'/>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:p-6' href='https://github.com/Steven7926/PillDispenserMobile'>Mobile App</a>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:p-6' href='https://github.com/Steven7926/PillDispenserCaregiverPortal'>Web Caregiver Portal</a>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:p-6' href='https://github.com/Steven7926/PillDispenserRaspberryPi'>Raspberry Pi</a>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:p-6' href='https://github.com/Steven7926/PillDispenserMCU'>MCU</a>
-                    </div>
-                    <div className='flex phone:flex-row flex-col items-center justify-center'>
-                        <iframe className='m-4 w-full h-full' src="https://www.youtube.com/embed/-0bP6SvqajM?si=CGmzGb-29-peGVUk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe className='m-4 w-full h-full' src="https://www.youtube.com/embed/3JALGwyClF8?si=uoMmKFnEVjcVmd4-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe className='m-4 w-full h-full' src="https://www.youtube.com/embed/-pVUCsU-33M?si=a2QZ-LaJPiT48q1T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <div className='flex phone:flex-row flex-col items-center justify-center mb-5'>
-                        <img src={magicmedsapp} className = 'phone:w-1/12 h-full w-6/12 rounded-xl mt-4' alt="MagicMeds App" />
-                        <ul className='phone:p-12 p-6 list-disc text-left inline-block phone:w-1/2'>
-                            <li>MERN stack based mobile app for scheduiling pills and sending notifications to both users and caregivers.</li>
-                            <li>Webb Portal for Caregivers to sign in and check on medication schedule.</li>
-                            <li>Python script running on Raspberry Pi for running GUI and contacting database for scheduling medication drops.</li>
-                            <li>Custom designed motor controller PCB with Atmega328 receiving data via SPI from the Raspberry Pi.</li>
-                        </ul>
-                    </div>
-                </Fade>
-            </div>
-            <div className = 'flex flex-col justify-center items-center rounded-md'>
-                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
-                    <a target="_blank" className='hover:scale-110 transition-transform flex flex-row justify-center items-center mt-5' href="https://github.com/Steven7926/OnlySocks" >
-                        <span className='font-bold '>OnlySocks</span>
-                        <img className='h-2/12 w-2/12' src={sock} alt="OnlySocks Logo" />
-                    </a>
-                    <div className='flex flex-row justify-center items-center'>
-                        <span className = 'phone:ml-0 ml-4'>An fun social media clone mobile and web app where users can only post about socks.</span>
-                    </div>
-                    <div className = 'flex phone:flex-row flex-col pt-1'>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:p-0' href='https://github.com/Steven7926/OnlySocks'>
-                            <FontAwesomeIcon icon={faGithub} size='2x' className='phone:pt-5 pr-2'/>
-                            Mobile and Web App
-                        </a>
-                    </div>
-                    <div className='flex phone:flex-row flex-col items-center justify-center mb-5'>
-                        <img src={onlysocks} className = 'phone:w-2/12 h-full w-6/12 rounded-xl mt-4' alt="OnlySocks App" />
-                        <ul className='phone:p-12 p-6 list-disc text-left inline-block phone:w-1/2'>
-                            <li>MERN stack based web and mobile app for posting statuses, liking and commenting, and making friend connections.</li>
-                            <li>Hosted on an AWS EC2 instance with S3 used for storing images in posts and profile photos.</li>
-                            <li>Login and signup implemented with a forgot password feature.</li>
-                            <li>Web and mobile app created to mimic similar features.</li>
-                            <li>Domain registered with Route 53 for DNS service and traffic routed with a Cloudfront Distribution as a CDN.</li>
-                        </ul>
-                    </div>
-                </Fade>
-            </div>
-            <div className = 'flex flex-col justify-center items-center rounded-md bg-blackClear'>
-                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
-                    <a target="_blank" className='hover:scale-110 transition-transform flex flex-row justify-center items-center mt-5' href="https://github.com/Steven7926/EventManager" >
-                        <span className='font-bold '>Contact Manager & Event Manager</span>
-                        <FontAwesomeIcon icon={faCalendar} size='2x' className='ml-2'/>
-                    </a>
-                    <div className='flex flex-row justify-center items-center'>
-                        <span className = 'phone:ml-0 ml-0'>Simple Event Managing and Contact Managing Web Apps </span>
-                    </div>
-                    <div className = 'flex phone:flex-row flex-col pt-3'>
-                        <FontAwesomeIcon icon={faGithub} size='2x' className='phone:pt-1'/>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:pl-0 phone:pt-5 pr-2' href='https://github.com/Steven7926/ContactManager'>
-                            <span className='ml-2'>Contact Manager</span>
-                        </a>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:pl-0 phone:pt-5 pr-2' href='https://github.com/Steven7926/EventManager'>
-                            <span className='ml-2'>Event Manager</span>
-                        </a>
-                    </div>
-                    <div className='flex phone:flex-row flex-col items-center justify-center mb-5'>
-                        <img src={eventmanager} className='phone:w-5/12 phone:h-full rounded-xl mt-4' alt="Events App" />
-                        <ul className='phone:p-12 p-6 list-disc text-left inline-block phone:w-1/2'>
-                            <li>LAMP stack based web app for managing events.</li>
-                            <li>Different user types implemented for event hosts, admin, and event attendees.</li>
-                            <li>Add and delete events for approval by an admin user.</li>
-                            <li>Different views served to the user depending on the users type.</li>
-                            <li>Sign up feature implemented.</li>
-                        </ul>
-                    </div>
-                    <div className='flex phone:flex-row flex-col items-center justify-center mb-5'>
-                        <img src={contactmanager} className='phone:w-5/12 phone:h-full rounded-xl mt-4' alt="Contacts App" />
-                        <ul className='phone:p-12 p-6 list-disc text-left inline-block phone:w-1/2'>
-                            <li>LAMP stack based web app for managing contacts.</li>
-                            <li>jQuery Datatables for easy data manipulation.</li>
-                            <li>Add, edit and delete and search for contacts.Add, edit and delete and search for contacts.</li>
-                            <li>Hosted on GoDaddy.</li>
-                        </ul>
-                    </div>
-                </Fade>
-            </div>
-            <div className = 'flex flex-col justify-center items-center rounded-md'>
-                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
-                    <a target="_blank" className='hover:scale-110 transition-transform flex flex-row justify-center items-center mt-5' href="https://github.com/Steven7926/TemplateTool" >
-                        <span className='font-bold '>PDF Template Tool</span>
-                        <FontAwesomeIcon icon={faFilePdf} size='2x' className='ml-2'/>
-                    </a>
-                    <div className='flex flex-row justify-center items-center'>
-                        <span className = 'phone:ml-0 ml-4'>A Tool for downloading generated pdf templates linked to a database for reupload.</span>
-                    </div>
-                    <div className = 'flex phone:flex-row flex-col pt-3'>
-                        <FontAwesomeIcon icon={faGithub} size='2x' className='phone:pt-1'/>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:pl-0 phone:pt-5 pr-2' href='https://github.com/Steven7926/TemplateTool'>
-                            <span className='ml-2'>Tool</span>
-                        </a>
-                    </div>
-                    <div className='flex phone:flex-row flex-col items-center justify-center mb-5'>
-                        {/* <img src={templateapp} className='phone:w-5/12 h-full rounded-xl mt-4' alt="Template App" /> */}
-                        <ul className='phone:p-12 p-6 list-disc text-left inline-block phone:w-1/2'>
-                            <li>Python based application that uses Tkinter for GUI</li>
-                            <li>Allows for uploading an excel file (I used the format given in the provided xlsx) of students and display them in a table while also downloading a zip of generated pdf files</li>
-                            <li>Allows for searching for students in the table and downloading individual generated pdfs and drawing files.</li>
-                            <li>Allows for uploading pdfs of finished drawings and crop them out and download them to an images folder. Allows for uploading pdfs of finished drawings and crop them out and download them to an images folder. </li>
-                            <li>Future work intended to make UI web app with backend Python API framework.</li>
-                        </ul>
-                    </div>
-                </Fade>
-            </div>
-            <div className = 'flex flex-col justify-center items-center rounded-md bg-blackClear'>
-                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.5}>
-                    <a target="_blank" className='hover:scale-110 transition-transform flex flex-row justify-center items-center mt-5' href="https://stevenlaurensteakations.com/" >
-                        <span className='font-bold '>Steakations Website Blog</span>
-                        <FontAwesomeIcon icon={faCalendar} size='2x' className='ml-2'/>
-                    </a>
-                    <div className='flex flex-row justify-center items-center'>
-                        <span className = 'phone:ml-0 ml-4'>A fun Dockerized Wordpress blog outlining me and my fiancés travels</span>
-                    </div>
-                    <div className = 'flex phone:flex-row flex-col pt-1'>
-                        <a target="_blank" className='hover:scale-110 transition-transform phone:pl-0 phone:pt-5 pr-2' href='https://github.com/Steven7926/Steakations'>
-                            <FontAwesomeIcon icon={faGithub} size='2x' className='phone:pt-1'/>
-                            <span className='ml-2'>Blog</span>
-                        </a>
-                    </div>
-                    <div className='flex phone:flex-row flex-col items-center justify-center mb-5'>
-                        <img src={steakations} className='rounded-xl mt-4 phone:w-5/12 phone:h-full' alt="Steakhouse Blog" />
-                        <ul className='phone:p-12 p-6 list-disc text-left inline-block phone:w-1/2'>
-                            <li>A fun way to learn Wordpress and more about hosting.</li>
-                            <li>The site is dockerized and deployed to a private S3 bucket for static website hosting.</li>
-                            <li>Hosted with AWS in a private S3 bucket as a static website.</li>
-                            <li>Domain registered with Route 53 for DNS service and traffic routed with a Cloudfront Distribution as a CDN.</li>
-                        </ul>
-                    </div>
-                </Fade>
-            </div>
-        </div>
-    );
+  return (
+    <>
+      <PageIntro cwd="~/projects" command="ls -la" title="projects">
+        My day job isn't public, so these are side projects and school builds — mostly made to learn something new.
+      </PageIntro>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        {projects.map((p) => (
+          <Rise key={p.id} className={p.wide ? "lg:col-span-2" : ""}>
+            {p.wide ? <WideProject p={p} /> : <Project p={p} />}
+          </Rise>
+        ))}
+        <Rise>
+          <Window title="~/projects/archive — ls" className="h-full">
+            <h2 className="m-0 mb-1 font-display text-4xl leading-none text-gold glow-gold">archive</h2>
+            <p className="m-0 mb-4 text-dim">Older school projects, kept for posterity.</p>
+            <ul className="m-0 p-0 list-none space-y-3">
+              {archive.map((a) => (
+                <li key={a.name}>
+                  <a href={a.href} className="link" {...external}>
+                    {a.name}/
+                  </a>
+                  <div className="text-dim text-sm">{a.note}</div>
+                </li>
+              ))}
+            </ul>
+          </Window>
+        </Rise>
+      </div>
+    </>
+  );
 }
+
 export default Projects;

@@ -1,16 +1,106 @@
-
-.AppPage {
-    font-size: calc(10px + 1vmin);
-    color: white;
-    font-family: monospace;
+.crt-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgb(0 0 0 / 0) 0px,
+      rgb(0 0 0 / 0) 2px,
+      rgb(0 0 0 / 0.13) 3px,
+      rgb(0 0 0 / 0) 4px
+    ),
+    radial-gradient(ellipse at center, rgb(0 0 0 / 0) 60%, rgb(0 0 0 / 0.42) 100%);
 }
 
-html {
-    scroll-behavior: smooth;
+.crt-ground {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgb(var(--c-sage) / 0.22), transparent 70%),
+    rgb(var(--c-ground));
 }
 
-#root {
-    background-color: #566E57;
+.crt-boot {
+  animation: crt-on 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  transform-origin: 50% 30vh;
 }
 
+@keyframes crt-on {
+  0%   { transform: scale(0.2, 0.003); filter: brightness(4); opacity: 0.6; }
+  35%  { transform: scale(1, 0.003);   filter: brightness(4); opacity: 1; }
+  100% { transform: scale(1, 1);       filter: brightness(1); }
+}
 
+.glow {
+  text-shadow:
+    0 0 1px rgb(var(--c-phosphor) / 0.6),
+    0 0 10px rgb(var(--c-phosphor) / 0.35);
+}
+
+.glow-gold {
+  text-shadow:
+    0 0 1px rgb(var(--c-gold) / 0.6),
+    0 0 14px rgb(var(--c-gold) / 0.3);
+}
+
+/* Block cursor */
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.15em;
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  background: rgb(var(--c-phosphor));
+  box-shadow: 0 0 8px rgb(var(--c-phosphor) / 0.6);
+  animation: blink 1.05s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media print {
+  @page { margin: 0.45in 0.55in; }
+
+  html, body, .crt-ground {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .crt-overlay,
+  .no-print { display: none !important; }
+  .crt-boot { padding-bottom: 0 !important; }
+
+  .resume-doc {
+    overflow: visible !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #111 !important;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9.6pt;
+    line-height: 1.38;
+  }
+  .resume-doc * {
+    color: #111 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    border-color: #bbb !important;
+  }
+  .resume-doc .term-bar { display: none !important; }
+  .resume-doc .resume-body { padding: 0 !important; }
+  .resume-doc a { text-decoration: none !important; }
+  .resume-doc h1 { font-size: 20pt; font-family: inherit !important; letter-spacing: 0; }
+  .resume-doc h2 {
+    font-size: 10.5pt;
+    border-bottom: 1px solid #999 !important;
+    margin-top: 10pt !important;
+    padding-bottom: 1pt;
+  }
+  .resume-doc .diff li { margin: 1.5pt 0; padding-left: 1em; }
+  .resume-doc .diff li::before { content: "•"; font-weight: 400; color: #111 !important; }
+  .resume-doc .resume-muted { color: #444 !important; }
+  .resume-doc li,
+  .resume-doc header { break-inside: avoid; }
+  .resume-doc h2 { break-after: avoid; }
+}

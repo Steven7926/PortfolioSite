@@ -1,96 +1,85 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUniversity } from '@fortawesome/free-solid-svg-icons'
-import { Fade } from "react-awesome-reveal";
-import ucf from '../assets/UCFlogo.png';
-import fam from '../assets/fam.jpg';
-import { faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
-import magicmeds from '../assets/magicmeds.png';
-import magicmedsapp from '../assets/MagicMedsApp.jpg';
-import acm from '../assets/ACM.png';
+import Window from "../components/Window";
+import CrtImage from "../components/CrtImage";
+import Rise from "../components/Rise";
+import { PageIntro } from "../components/Prompt";
+import { education, leadership } from "../data/resume";
+import ucfSeal from "../assets/UCFlogo.png";
+import graduation from "../assets/fam.jpg";
+import acmLogo from "../assets/ACM.png";
 
 function Education() {
-    return (
-        <div id="education" className='flex flex-col'>
-            <div className='px-8'>
-                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.4}>
-                    <div className='flex justify-center items-center'>
-                        <span className='pt-4 px-2'>Education</span>
-                        <FontAwesomeIcon icon={faUniversity} size='2x' />
-                    </div>              
-                    <div className='flex justify-center items-center p-2'>
-                        <a href="https://ucf.edu" className='hover:scale-110 transition-transform'><b>University of Central Florida</b> </a>
-                    </div>
-                    <div className='flex justify-center items-center'>
-                        <span><b>Fall 2017 - Spring 2021</b></span>
-                    </div>
-                    <div className='flex phone:flex-row flex-col p-2 flex-wrap justify-center items-center'>
-                        <img className='phone:w-1/4 w-6/12' src={ucf} alt="UCF Logo" />
-                        <div className='phone:p-8 pb-4 ml-0 phone:ml-6'>
-                                <div>
-                                    <span> Major: Computer Engineering </span>
-                                </div>
-                                <div>
-                                    <span> Minor: Mathematics </span>
-                                </div>
-                                <div>
-                                    <span> Degree Received: Bachelors of Science</span>
-                                </div>
-                                <div>
-                                    <span> GPA: 3.2 </span>
-                                </div>
-                                <span> Took courses in the following:</span>
-                                <div className='ml-8'>
-                                        <li>Computer Architecture</li>
-                                        <li>Data Structures</li>
-                                        <li>Embedded Systems</li>
-                                        <li>Software Design</li>
-                                        <li>Circuit Theory</li>
-                                        <li>Mathematics</li>
-                                        <li>Physics</li>
-                                </div>
-                        </div>
-                        <img src={fam} className = 'phone:w-1/4 w-8/12 rounded-3xl' alt="Family" />                      
-                    </div>
-                    <div className = 'flex justify-center pt-4'>
-                        <span className='px-2 pt-2'>Leadership</span>
-                        <FontAwesomeIcon icon={faChalkboardTeacher} size='2x'/>
-                    </div>
-                    <div className=" pt-2 flex flex-col items-center">
-                        <a className="hover:scale-110 transition-transform" href="https://ucfacmw.org/" ><b>Association of Computer Machinery (ACM)</b></a>
-                        <span className = "responsibility"><b>Web & Mobile Dev Director</b></span>
-                    </div>
-                    <div className = 'flex flex-row flex-wrap  items-center justify-center'>
-                        <img src={acm} className = "phone:w-2/12 phone:h-2/6 w-6/12 h-full rounded-2xl mt-4" alt="ACM Logo" />
-                        <ul className='p-4 phone:p-12 list-disc text-left inline-block'>
-                            <li>Teach students the fundamentals of  web and mobile development.</li>
-                            <li>Introduce basic front end and back end development concepts to club members.</li>
-                            <li>Promote fun side projects and help club members who pursued them.</li>
-                            <li>Answer any questions club members had about development.</li>     
-                            <li>Teach and run workshops on introduction web development material.</li>
-                        </ul>
-                    </div>
-                    </Fade>
-                <Fade duration={800} direction="up" triggerOnce = {true} cascade fraction={0} damping={0.4}>
-                    <div className='flex flex-col justify-center items-center'>
-                        <div className = 'flex flex-row justify-center items-center'>
-                            <a className='font-bold hover:scale-110 transition-transform' href="https://www.cecs.ucf.edu/SeniorDesignShowcase/team/magicmeds-automatic-pill-dispenser/" >Team Lead</a>
-                            <img className = 'w-3/12' src={magicmeds} alt="MagicMeds Logo" />
-                        </div>
-                        <span className='font-bold'>Senior Design Project</span>
-                    </div>
-                    <div className = 'flex phone:flex-row flex-col justify-center phone:ml-10'>               
-                        <img src={magicmedsapp} className = 'phone:w-2/12 w-7/12 rounded-xl mt-4' alt="MagicMeds App" />
-                        <ul className = 'p-4 phone:p-12 list-disc text-left inline-block'>                                                        
-                            <li>Schedule and coordinate tasks and responsibilities to ensure deadlines were met.</li>
-                            <li>Motivate team members and manage time efficiently.</li>
-                            <li>Provide ideas and possible solutions to road blocks that team members faced.</li>  
-                            <li>Promote teamwork and efficiency in a healthy team setting</li>                     
-                        </ul>
-                    </div>
-                </Fade>    
+  return (
+    <>
+      <PageIntro cwd="~/education" command="cat ucf.txt leadership.txt" title="education">
+        Computer Engineering at UCF — and the places I've ended up leading people.
+      </PageIntro>
+
+      <div className="grid gap-6 lg:grid-cols-5">
+        <Rise className="lg:col-span-3">
+          <Window title="~/education/ucf.txt" className="h-full">
+            <div className="flex flex-col phone:flex-row gap-5">
+              <a href={education.url} target="_blank" rel="noreferrer" className="shrink-0 self-start">
+                <img src={ucfSeal} alt="University of Central Florida seal" className="w-24 h-24 rounded-full" />
+              </a>
+              <div className="min-w-0">
+                <h2 className="m-0 font-display text-4xl leading-none text-gold glow-gold">{education.school}</h2>
+                <div className="text-dim text-sm mt-1">
+                  {education.location} · {education.period}
+                </div>
+                <dl className="m-0 mt-4 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1">
+                  <dt className="text-gold">degree</dt>
+                  <dd className="m-0">{education.degree}</dd>
+                  <dt className="text-gold">minor</dt>
+                  <dd className="m-0">{education.minor}</dd>
+                </dl>
+              </div>
             </div>
-        </div>
-    );
+            <h3 className="mt-6 mb-2 text-sm font-semibold text-phosphor">
+              <span className="text-dim">## </span>coursework
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {education.coursework.map((c) => (
+                <span key={c} className="chip">
+                  {c}
+                </span>
+              ))}
+            </div>
+          </Window>
+        </Rise>
+
+        <Rise className="lg:col-span-2" delay={120}>
+          <Window title="~/education/graduation.jpg" className="h-full" bodyClassName="p-3">
+            <CrtImage
+              src={graduation}
+              alt="Steven in cap and gown at UCF graduation with family under a balloon arch"
+              caption="graduation day, 2021 — the people who got me there. the masks really show a sign of the times."
+              imgClassName="aspect-[4/3] object-[center_80%]"
+            />
+          </Window>
+        </Rise>
+      </div>
+
+      <Rise>
+        <Window title="~/education/leadership.txt" className="mt-6">
+          <div className="flex flex-col md:flex-row gap-8">
+            <ol className="m-0 p-0 list-none grid gap-5 sm:grid-cols-2 flex-1">
+              {leadership.map((l) => (
+                <li key={l.role} className="border-l-2 border-sage pl-4">
+                  <div className="font-semibold text-gold">{l.role}</div>
+                  <div className="text-dim text-sm">
+                    {l.org}
+                    {l.period && ` · ${l.period}`}
+                  </div>
+                  <p className="m-0 mt-1">{l.detail}</p>
+                </li>
+              ))}
+            </ol>
+            <img src={acmLogo} alt="UCF ACM & ACM-W 2020–2021 logo" className="w-32 h-32 rounded-md self-center md:self-start opacity-90" />
+          </div>
+        </Window>
+      </Rise>
+    </>
+  );
 }
+
 export default Education;

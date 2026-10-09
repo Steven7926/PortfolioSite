@@ -1,64 +1,96 @@
-import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons'
-import { Fade } from "react-awesome-reveal";
-import theraplan from '../assets/TheraplanLogo.png';
-import iex from '../assets/svgs/IEX.svg';
+import Window from "../components/Window";
+import Rise from "../components/Rise";
+import { PageIntro } from "../components/Prompt";
+import { experience, profile } from "../data/resume";
+import { yearsSince } from "../utils/time";
 
+function Job({ job }) {
+  return (
+    <Window title={`~/work/${job.file}`} meta={<span className="hidden sm:inline">{job.period}</span>}>
+      <div className="flex flex-col sm:flex-row gap-5">
+        <a
+          href={job.url}
+          target="_blank"
+          rel="noreferrer"
+          className={`shrink-0 w-24 h-24 rounded-md grid place-items-center p-2.5 border border-line transition-shadow hover:shadow-[0_0_20px_-4px_rgb(var(--c-phosphor)/0.6)] ${
+            job.logoTile === "light" ? "bg-[#eef3ec]" : "bg-black"
+          }`}
+        >
+          <img src={job.logo} alt={`${job.company} website`} className="max-w-full max-h-full object-contain" />
+        </a>
+        <div className="min-w-0">
+          <h2 className="m-0 font-display text-4xl leading-none text-gold glow-gold">{job.company}</h2>
+          <div className="mt-1 font-semibold">
+            {job.role}
+            {job.roleNote && <span className="text-dim font-normal"> — {job.roleNote}</span>}
+          </div>
+          <div className="text-dim text-sm">
+            {job.location} · {job.period}
+          </div>
+          {job.badge && (
+            <span className="chip mt-2 !text-phosphor !border-phosphor/40">
+              <span aria-hidden="true">●</span> {job.badge}
+            </span>
+          )}
+          <p className="text-dim mt-3 mb-0 max-w-3xl">{job.summary}</p>
+        </div>
+      </div>
+
+      <div className="mt-7 grid gap-x-10 gap-y-6 lg:grid-cols-2">
+        {job.groups.map((g) => (
+          <section key={g.label}>
+            <h3 className="m-0 text-sm font-semibold text-phosphor">
+              <span className="text-dim">## </span>
+              {g.label}
+            </h3>
+            <ul className="diff mt-2">
+              {g.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      <div className="mt-7 pt-4 border-t border-line border-dashed flex flex-wrap items-center gap-2">
+        <span className="text-dim text-sm mr-1">stack:</span>
+        {job.stack.map((s) => (
+          <span key={s} className="chip">
+            {s}
+          </span>
+        ))}
+      </div>
+    </Window>
+  );
+}
 
 function WorkExperience() {
-    return (
-        <div className='flex-col p-6' id="workexperience">
-            <Fade direction="up" duration={1000} delay={0} triggerOnce={true}>            
-                <div className="pb-2 flex flex-row justify-center items-center">
-                    <span className = "pr-3">Work</span>
-                    <FontAwesomeIcon icon={faBriefcase} size='2x' className=""/>
-                </div>
-            </Fade>
-            <div>
-                <Fade direction="up" duration={1000} delay={500} cascade fraction={0} damping={0.2} triggerOnce={true}>
-                    <div className="flex flex-col justify-center items-center">
-                        <div className="bg-black rounded-lg shadow-lg font-mono phone:w-3/4">
-                            <div className = "flex flex-row phone:px-10 phone:py-5 px-1 py-1">
-                                <a className="w-1/2 hover:scale-105 transition-all ease-in-out" href="https://ironeaglex.com/"><b>Iron EagleX</b>: Full Stack Engineer </a>
-                                <span className = "w-1/2 flex justify-end px-1"><b>September 2021 - Present</b></span>
-                            </div>
-                            <div className = "flex xl:flex-row flex-col phone:px-10 w-full justify-center items-center">                                                  
-                                <div className="w-2/6">
-                                    <img src={iex} className = "rounded-lg"  alt="IEX Logo" />
-                                </div>
-                                <div className='flex'>
-                                    <span className='p-4'>
-                                        Here I worked on many different contracts and learned a lot about large scale microservice based
-                                        applications and how to work in smaller teams as part of a larger application therough a SAFe Agile workflow.
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br />
-                    <div className="flex flex-col justify-center items-center">  
-                        <div className="bg-theraplan rounded-lg shadow-lg font-mono phone:w-3/4">
-                            <div className = "flex flex-row phone:px-10 phone:py-5 px-1 py-1">
-                                <a className="w-1/2 hover:scale-105 transition-all ease-in-out" href="https://theraplan.com"><b>TheraPlan</b>: Developer, Tester, and Support Specialist </a>
-                                <span className = "w-1/2 flex justify-end px-2"><b>June 2017 - September 2021</b></span>
-                            </div>
-                            <div className = "flex xl:flex-row flex-col phone:px-10 w-full justify-center items-center">                                                  
-                                    <div className="w-3/12 pb-3">
-                                        <img src={theraplan} className = "rounded-lg"  alt="TheraPLan Logo" />
-                                    </div>
-                                    <div className = 'flex flex-col'>
-                                        <span className='p-4'>
-                                            At TheraPlan I wore a lot of hats! Starting as a blackbox tester and support specialist early on in the softwares life,
-                                            I eventually graduated into doing full time development work for the program. 
-                                        </span>
-                                    </div>                              
-                            </div>
-                        </div>
-                    </div>
-                </Fade>
-            </div>    
-        </div>
-    );
+  const total = yearsSince(profile.careerStart);
+  const current = yearsSince(experience[0].start);
+
+  return (
+    <>
+      <PageIntro cwd="~/work" command="cat *.log" title="work">
+        {total}+ years shipping software, the last {current} as a full-time engineer at {experience[0].company}.
+      </PageIntro>
+
+      <Rise>
+        <ol className="relative m-0 p-0 list-none space-y-10 md:pl-12 md:before:content-[''] md:before:absolute md:before:left-[0.95rem] md:before:top-3 md:before:bottom-3 md:before:w-px md:before:bg-line">
+          {experience.map((job) => (
+            <li key={job.id} className="relative">
+              <span
+                aria-hidden="true"
+                className="hidden md:block absolute -left-12 top-2.5 w-[1.95rem] text-center text-phosphor glow font-semibold bg-ground"
+              >
+                *
+              </span>
+              <Job job={job} />
+            </li>
+          ))}
+        </ol>
+      </Rise>
+    </>
+  );
 }
+
 export default WorkExperience;

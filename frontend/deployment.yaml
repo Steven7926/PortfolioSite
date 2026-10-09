@@ -16,8 +16,14 @@ spec:
         - name: portfolio
           image: steven926/portfolio:latest
           ports:
-            - containerPort: 3000
+            - containerPort: 8080
           imagePullPolicy: Always
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 2
+            periodSeconds: 10
 
 ---
 
